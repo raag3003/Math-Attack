@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Chat Interface</title>
+        <!-- Bootstrap CSS -->
+    </head>
+    <body>
+        <div class="container">
+            <!-- User input section -->
+            <div class="row p-1">
+                <div class="form-label">User:</div>
+                <div class="col-5">
+                    <input type="text" id="userInput" placeholder="Username" />
+                </div>
+            </div>
+
+            <!-- Group input section -->
+            <div class="row p-1">
+                <div class="form-label">Group:</div>
+                <div class="col-5">
+                    <input type="text" id="groupInput" placeholder="Enter group name" />
+                </div>
+            </div>
+
+            <!-- Message input section -->
+            <div class="row p-1">
+                <div class="form-label">Message:</div>
+                <div class="col-5">
+                    <input type="text" class="w-100" id="messageInput" placeholder="Write what's on your mind" />
+                </div>
+            </div>
+
+            <!-- Send message button -->
+            <div class="row p-1">
+                <div class="col-6">
+                    <input type="button" id="sendButton" value="Send Message" />
+                </div>
+            </div>
+
+            <hr />
+
+            <!-- Group management buttons -->
+            <div class="row p-1">
+                <div class="col-auto">
+                    <input type="button" id="createGroupButton" value="Create Group" />
+                </div>
+                <div class="col-auto">
+                    <input type="button" id="joinGroupButton" value="Join Group" />
+                </div>
+                <div class="col-auto">
+                    <input type="button" id="leaveGroupButton" value="Leave Group" />
+                </div>
+            </div>
+
+            <!-- Message list -->
+            <div class="row p-1">
+                <div class="col-6">
+                    <ul id="messagesList"></ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- SignalR library -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.min.js"></script>
+        <!-- Custom chat script -->
+        <script src="~/js/chat.js"></script>
+    </body>
+</html>
