@@ -1,3 +1,13 @@
+button{
+    background-color: lightslategrey;
+    width: 25%;
+    height: 30%;
+    padding: 30px;
+    border-radius: 20px;
+
+    font-size: medium;
+}
+
 #StartGameButton{
     color: red;
 }
