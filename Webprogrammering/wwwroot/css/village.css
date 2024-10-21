@@ -1,0 +1,275 @@
+html, body {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+}
+
+.start-background {
+    background-image: url('../images/backgroundTop.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 0px;
+    height: 550px;
+}
+
+.start-menu {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    background-color: #deedec;
+    padding-bottom: 30%;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    width: auto;
+    height: auto;
+}
+
+.village-background {
+    background-image: url('../images/villagedrawing.jpg');
+    background-repeat: no-repeat;
+    margin-bottom: 0px;
+    background-position: top;
+    background-size: 100% 100%;
+    height: 100vh;
+    width: 100%
+}
+
+.village-menu {
+    text-align: center;
+    position: relative;
+    padding-bottom: 45%;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    width: auto;
+    height: auto;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+button {
+    position: absolute;
+    border-radius: 100%;
+    border: 2px;
+    color: white;
+    height: 45px;
+    width: auto;
+}
+
+.start-button {
+    border-radius: 50%;
+    border: 2px;
+    height: 65px;
+    width: 125px;
+    background-color: red;
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+}
+
+.button-kampplads {
+    height: 11vh;
+    background-color: red;
+}
+.button-denSorteSkole {
+    height: 22vh;
+    background-color: black;
+}
+.button-indstillinger {
+    height: 17vh;
+    background-color: gray;
+}
+.button-hjem {
+    height: 14vh;
+    background-color: aqua;
+}
+
+
+
+/* Media queries to adjust buttons on different screen sizes */
+/*--------------------------------------------------------------------------------------------------*/
+@media (max-width: 576px) { /* xs */
+    .button-kampplads {
+        top: 53vh;
+        left: 25vw;
+        height: 9vh;
+    }
+
+    .button-denSorteSkole {
+        top: 71vh;
+        left: -9vw;
+        height: 18vh;
+    }
+
+    .button-indstillinger {
+        top: 55vh;
+        left: 45vw;
+        height: 15vh;
+    }
+
+    .button-hjem {
+        top: 80vh;
+        left: 70vw;
+        height: 8vh;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 660px) { /* sm */
+    .button-kampplads {
+        top: 57vh;
+        left: 25vw;
+        height: 9vh;
+    }
+
+    .button-denSorteSkole {
+        top: 69vh;
+        left: -3vw;
+        height: 19vh;
+    }
+
+    .button-indstillinger {
+        top: 56vh;
+        left: 50vw;
+        height: 15vh;
+    }
+
+    .button-hjem {
+        top: 76vh;
+        left: 72vw;
+        height: 8vh;
+    }
+}
+
+/*An ekstra screen size*/
+@media (min-width: 660px) and (max-width: 768px) {
+    .button-kampplads {
+        top: 57vh;
+        left: 25vw;
+        height: 9vh;
+    }
+
+    .button-denSorteSkole {
+        top: 69vh;
+        left: -3vw;
+        height: 19vh;
+    }
+
+    .button-indstillinger {
+        top: 56vh;
+        left: 50vw;
+        height: 15vh;
+    }
+
+    .button-hjem {
+        top: 76vh;
+        left: 72vw;
+        height: 8vh;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 910px) { /* md */
+    .button-kampplads {
+        top: 57vh;
+        left: 25vw;
+        height: 9.5vh;
+    }
+
+    .button-denSorteSkole {
+        top: 69vh;
+        left: -3vw;
+        height: 20vh;
+    }
+
+    .button-indstillinger {
+        top: 56vh;
+        left: 50vw;
+        height: 17vh;
+    }
+
+    .button-hjem {
+        top: 76vh;
+        left: 72vw;
+        height: 9vh;
+    }
+}
+
+/*An extra screen size*/
+@media (min-width: 910px) and (max-width: 992px) {
+    .button-kampplads {
+        top: 55vh;
+        left: 27vw;
+        height: 10vh;
+    }
+
+    .button-denSorteSkole {
+        top: 60vh;
+        left: -3vw;
+        height: 20vh;
+    }
+
+    .button-indstillinger {
+        top: 55vh;
+        left: 55vw;
+        height: 16.5vh;
+    }
+
+    .button-hjem {
+        top: 75vh;
+        left: 73vw;
+        height: 9vh;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) { /* lg */
+    .button-kampplads {
+        top: 55vh;
+        left: 29vw;
+        height: 10vh;
+    }
+
+    .button-denSorteSkole {
+        top: 65vh;
+        left: 2vw;
+        height: 20vh;
+    }
+
+    .button-indstillinger {
+        top: 52vh;
+        left: 57vw;
+        height: 16vh;
+    }
+
+    .button-hjem {
+        top: 75vh;
+        left: 77vw;
+        height: 9vh;
+    }
+}
+
+@media (min-width: 1200px) { /* xl */
+    .button-kampplads {
+        top: 57vh;
+        left: 31vw;
+        height: 10vh;
+    }
+
+    .button-denSorteSkole {
+        top: 65vh;
+        left: 6vw;
+        height: 20vh;
+    }
+
+    .button-indstillinger {
+        top: 52vh;
+        left: 57vw;
+        height: 16vh;
+    }
+
+    .button-hjem {
+        top: 75vh;
+        left: 75vw;
+        height: 9vh;
+    }
+}

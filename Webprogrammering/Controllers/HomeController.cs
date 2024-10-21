@@ -30,6 +30,10 @@ namespace Webprogrammering.Controllers
         {
             return View();
         }
+        public IActionResult fantasyVillage()
+        {
+            return View();
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
