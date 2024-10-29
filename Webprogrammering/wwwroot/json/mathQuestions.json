@@ -1,0 +1,60 @@
+{
+  "questions": [
+    {
+      "difficulty": "4. Klasse",
+      "category": "Addition",
+      "question": "45 + 32",
+      "correctAnswer": "77",
+      "incorrectAnswers": [ "80", "10", "100" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "5. Klasse",
+      "category": "Rumfang",
+      "question": "Volumen af en 4cm x 3cm x 2cm box?",
+      "correctAnswer": "24",
+      "incorrectAnswers": [ "30", "25", "35" ],
+      "unit": "m^3"
+    },
+    {
+      "difficulty": "6. Klasse",
+      "category": "Primtal",
+      "question": "Nævn de første tre tal i det primære talmønster?",
+      "correctAnswer": "2, 3, 5",
+      "incorrectAnswers": [ "2, 4, 6", "1, 2, 3", "5, 10, 15" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "7. Klasse",
+      "category": "Ligninger og funktioner",
+      "question": "3x + 4 =16",
+      "correctAnswer": "x = 4",
+      "incorrectAnswers": [ "x = 1", "x = 10", "x = 40" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "8. Klasse",
+      "category": "Ligninger og funktioner",
+      "question": "y = 3x + 2",
+      "correctAnswer": "Gradient = 3",
+      "incorrectAnswers": [ "Gradient = 5", "Gradient = 23", "Gradient = 50" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "9. Klasse",
+      "category": "Geometri",
+      "question": "Omkredsen af en cirkel med en diameter på 10 cm",
+      "correctAnswer": "31,4",
+      "incorrectAnswers": [ "4", "23", "30" ],
+      "unit": "cm"
+    },
+    {
+      "difficulty": "10. Klasse",
+      "category": "Ligninger og funktioner",
+      "question": "x^2-5x+6=0",
+      "correctAnswer": "x=2 || x=3",
+      "incorrectAnswers": [ "x=1 || x=5", "x=20 || x=10", "x=12 || x=15" ],
+      "unit": ""
+    }
+  ]
+}

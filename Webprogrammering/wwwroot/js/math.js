@@ -57,7 +57,9 @@ connection.start()
 
 
 
-// Event listeners for buttons
+
+// Event listeners for all the buttons
+//---------------------------------------------------------------------------------------------------------------
 elements.createGroupButton.addEventListener("click", () => {
     invokeHubMethod("CreateGroup", elements.groupInput.value);
 });

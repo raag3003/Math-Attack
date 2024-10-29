@@ -13,10 +13,11 @@ namespace Webprogrammering.Hubs
         public async Task SendMathProblem(string groupName)
         {
             // Fetch the problem from the API
-            var response = await client.GetStringAsync("https://opentdb.com/api.php?amount=10&category=19&difficulty=easy");
-            var result = JsonDocument.Parse(response).RootElement.GetProperty("results")[0];
+            var response = await client.GetStringAsync("https://localhost:44300/questions/");
+            // VIGTIGT!: Hvis API'en ændres, skal du sikre dig, at variablerne "result", "problem" og "correctAnswer" bruger de korrekte navne fra API'en (som angivet i anførselstegnene: "").
+            var result = JsonDocument.Parse(response).RootElement.GetProperty("questions")[0];
             var problem = result.GetProperty("question").GetString();
-            var correctAnswer = result.GetProperty("correct_answer").GetString();
+            var correctAnswer = result.GetProperty("correctAnswer").GetString();
 
             // Store the correct answer for this group
             correctAnswers[groupName] = correctAnswer;
