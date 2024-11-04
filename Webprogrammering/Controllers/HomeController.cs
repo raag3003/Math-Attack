@@ -36,6 +36,11 @@ namespace Webprogrammering.Controllers
         {
             return View();
         }
+        [Authorize]
+        public IActionResult denSorteSkole()
+        {
+            return View();
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

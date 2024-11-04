@@ -1,0 +1,141 @@
+﻿@{
+    ViewData["Title"] = "Den Sorte Skole";
+    ViewBag.ShowFooter = false;
+}
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Den Sorte Skole</title>
+        <link href="~/css/densorteskole.css" rel="stylesheet" />
+        <script defer src="~/js/densorteskole.js"></script>
+
+        <!--Inported MathJax to make the math equations look pretty. Keep in mind that the math equations now is written in LaTex format-->
+        <script id="MathJax-script" defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <!--Font inported from Google Fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    </head>
+
+    <body class="denSorteSkole-Background">
+        <div class="denSorteSkole-Menu">
+
+            <div class="denSorteSkole-NavMenu">
+                <h1>Velkommen til Den Sorte Skole</h1>
+                <br /><br />
+                <button class="col-3 btn btn-primary openFormulas">Formelsamling</button>&nbsp;&nbsp;
+                <button class="col-3 btn btn-secondary openFlashcards">Flashcards</button>&nbsp;&nbsp;
+                <button class="col-3 btn btn-danger openTest">Test</button>
+            </div><br />
+
+            <!--The code for all the math formulas-->
+            <!-------------------------------------------------------------------------------------------------------------------------------->
+            <div class="Formelsamling row">
+                <h3 style="text-align: center; display: inline; margin-right: 14%; margin-left: 30%" class="col-10">Formelsamling</h3>
+                <button style="border-radius: 20px; display: inline" class="col-2 btn-danger close">Luk</button>
+                <br /><br /><hr />
+                <details>
+                   <summary style="text-align: left;">
+                       Volume
+                       <hr />
+                   </summary>
+
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Formler</th>
+                                <th>Forklaring</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Firkant</td>
+                                <td>\( V = s^3 \)</td>
+                                <td>\(s = En side på firkanten\)</td>
+                            </tr>
+                            <tr>
+                                <td>Kugle</td>
+                                <td>\( V = \frac{4}{3} \pi \cdot r^3 \)</td>
+                                <td>\(\pi = 3.14\)<br />\(r = Radius\)</td>
+                            </tr>
+                            <tr>
+                                <td>Cylinder</td>
+                                <td>\( V = \pi \cdot r^2 \cdot h \)</td>
+                                <td>\(\pi = 3.14\)<br />\(r = Radius\)<br />\(h = Højden\)</td>
+                            </tr>
+                            <tr>
+                                <td>Kegle (Pyramide)</td>
+                                <td>\( V = \frac{1}{3} g \cdot h \)</td>
+                                <td>\(g = Grundfladen\)<br />\(h = Højden\)</td>
+                            </tr>
+                            <tr>
+                                <td>Prisme</td>
+                                <td>\( V = g \cdot h \)</td>
+                                <td>\(g = Grundfladen\)<br />\(h = Højden\)</td>
+                            </tr>
+                            <tr>
+                                <td>Parallelepipedum</td>
+                                <td>\( V = l \cdot b  \cdot h \)</td>
+                                <td>\(l = Længden\)<br />\(b = Bredden\)<br />\(h = Højden\)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </details>
+            </div>
+
+            <!--The code for the testing box-->
+            <!---------------------------------------------------------------------------------------------------------->
+            <div class="test-container">
+                <h2>Hvad vil du teste i dag?</h2>
+                <div class="test-types">
+                    <div class="test-box" id="add">
+                        <h3>Plus</h3>
+                    </div>
+                    <div class="test-box" id="subtract">
+                        <h3>Minus</h3>
+                    </div>
+                    <div class="test-box" id="multiply">
+                        <h3>Gange</h3>
+                    </div>
+                    <div class="test-box" id="divide">
+                        <h3>Divition</h3>
+                    </div>
+                </div>
+                <button style="border-radius: 100%; display: inline" class="col-2 btn-danger close">Luk</button>
+                <dialog style="font-size: 16px; font-family: 'serif'" id="testDialog">
+                    <div class="test" id="test">
+                        <p>Hvad er:</p>
+                        <span id="num1"></span>
+                        <span id="operator"></span>
+                        <span id="num2"></span>?
+                    </div>
+                    <input type="text" id="answer" placeholder="Dit svar">
+                    <div class="action-buttons">
+                        <button class="btn-success" onclick="checkAnswer()">Indsend</button>
+                        <button class="btn-danger" onclick="closeDialog()">Luk</button>
+                    </div>
+                    <div id="result"></div>
+                </dialog>
+            </div>
+
+            <!--The code for the flashcard box-->
+            <!---------------------------------------------------------------------------------------------------------->
+            <div class="flashcard">
+                <div class="flashcard-exit">
+                    <button class="btn-danger close">Luk</button>
+                </div>
+                <div class="flashcard-body">
+                    <div class="flashcard-front">
+                        <p>Den lange side på en trekant</p>
+                    </div>
+                    <div class="flashcard-back">
+                        <p>Hypotenusen</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <br /><br /><br /><br /><br /><br />
+    </body>
+</html>
