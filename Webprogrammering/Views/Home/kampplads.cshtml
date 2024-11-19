@@ -1,0 +1,73 @@
+﻿@{
+    ViewData["Title"] = "Math-Attack";
+    ViewBag.ShowFooter = false;
+}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Math-Attack</title>
+        <link href="~/css/kampplads.css" rel="stylesheet"/>
+    <script id="MathJax-script" defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </head>
+    <body>
+        <!--Modal box for the user to choose a difficultcy and match with an opponent-->
+        <div class="modal" id="matchOpponent">
+            <div class="modal-content">
+                <!-- Difficulty Selection Screen -->
+                <div class="difficultyScreen">
+                    <h1>Velkommen til Math-Attack spillet</h1>
+                    <p>Vælg en svarhedgrad, også finder vi en modsatnder til dig!🎮</p>
+
+                    <button class="difficulty-level-button col-3 btn-secondary">4. Klasse</button>
+                    <button class="difficulty-level-button col-3 btn-secondary">5. Klasse</button>
+                    <button class="difficulty-level-button col-3 btn-secondary">6. Klasse</button>
+                    <button class="difficulty-level-button col-3 btn-secondary">7. Klasse</button>
+                    <button class="difficulty-level-button col-3 btn-secondary">8. Klasse</button>
+                    <button class="difficulty-level-button col-3 btn-secondary">9. Klasse</button>
+                    <button class="difficulty-level-button col-3 btn-secondary">10. Klasse</button>
+                </div>
+                <!-- Searching for Opponent Screen -->
+                <div class="searchOpponent" style="display: none;">
+                    <h1>Leder efter en modstander</h1><br />
+                    <p>Det kan godt tage et par minutter</p>
+                    <div class="d-flex justify-content-center">
+                        <div class="spinner-border" role="status">
+                            <span class="sr-only"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--Game area-->
+        <div class="gameArena">
+            <div class="player1">
+                <p>Player 1</p>
+            </div>
+            <div class="player-input">
+                <input type="text" class="answer-input" placeholder="Indtast dit svar her">
+                <button class="submit-answer btn-primary">Svar</button>
+            </div>
+            <div class="questions-container">
+                <template id="question-template">
+                    <div class="question-box">
+                        <div class="question"></div>
+                        <div class="unit"></div>
+                        <div style="display: inline" class="answers"></div>
+                    </div>
+                </template>
+            </div>
+            <div class="player2">
+                <p>Player 2</p>
+            </div>
+
+        </div>
+
+        <!-- Refference to online SignalR library -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.min.js"></script>
+        <!-- Refference to the JavaScript file -->
+        <script src="~/js/kampplads.js"></script>
+    </body>
+</html>

@@ -1,0 +1,151 @@
+﻿body {
+    margin: 0px;
+}
+
+.gameArena {
+    display: none;
+    text-align: center;
+}
+
+.player1, .player2 {
+    display: inline-flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    width: 70px;
+    height: 70px;
+    top: 40%;
+}
+
+.player1 {
+    background-color: red;
+    position: absolute;
+    left: 10px;
+    margin-bottom: 15px;
+}
+.player2 {
+    background-color: blue;
+    position: absolute;
+    right: 10px;
+}
+
+
+/*Modal Box*/
+/*----------------------------------------------------------------------------------*/
+/* The overall stylling to the Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+/* Styleling the content inside the Modal */
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    min-height: 525px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+/*Stylling to the buttons inside the Modal box, which choose the dificulcy of the questions*/
+.difficulty-level-button {
+    margin: 5px;
+    width: auto;
+    height: 58px;
+    border-radius: 100%;
+    border: 1px;
+    font-size: 10px;
+}
+.close-button {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    width: 40px;
+    border-radius: 5px;
+}
+
+/*Stylling for the countdown timer*/
+/*--------------------------------------------------------------------------*/
+.countdown {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 120px;
+    color: #333;
+    z-index: 1000;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+
+/*Styling to the math quetion which spawn ontoo the screen*/
+/*--------------------------------------------------------------------------------*/
+.questions-container {
+    position: relative;
+    height: 500px;
+    width: 100%;
+    padding: 0 100px;
+    overflow: hidden;
+}
+.question-box {
+    position: relative;
+    background: white;
+    border: 1px solid #333;
+    padding: 2px;
+    animation: fallDown 10s linear forwards; /* It takes 10s for a quetion to fall from top to bottom */
+    border-radius: 5px;
+    min-width: 320px;
+    min-height: 40px;
+    margin-bottom: 15px;
+    gap: 20px;
+}
+@keyframes fallDown {
+    from {
+        top: -200px;
+    }
+
+    to {
+        top: 70px;
+    }
+}
+
+.answer-button {
+    padding: 5px 10px;
+    border: 1px solid #333;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.answer-button.correct {
+    background-color: green;
+}
+.answer-button.incorrect {
+    background-color: red;
+    pointer-events: none; /* Erstatter disabled attributten */
+}
+.answers {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}

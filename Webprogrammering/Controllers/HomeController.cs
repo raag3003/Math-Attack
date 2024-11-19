@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using System.IO;
+using System.Text.Json;
 using Webprogrammering.Models;
 
 namespace Webprogrammering.Controllers
@@ -38,6 +40,11 @@ namespace Webprogrammering.Controllers
         }
         [Authorize]
         public IActionResult denSorteSkole()
+        {
+            return View();
+        }
+        [Authorize]
+        public IActionResult kampplads()
         {
             return View();
         }

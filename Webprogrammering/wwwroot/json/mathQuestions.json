@@ -2,22 +2,106 @@
   "questions": [
     {
       "difficulty": "4. Klasse",
-      "category": "Addition",
+      "id": 1,
+      "category": "Regnestrategier",
       "question": "45 + 32",
       "correctAnswer": "77",
       "incorrectAnswers": [ "80", "10", "100" ],
       "unit": ""
     },
     {
+      "difficulty": "4. Klasse",
+      "id": 2,
+      "category": "Tal",
+      "question": "Skriv tallet tre hundrede og syv",
+      "correctAnswer": "307",
+      "incorrectAnswers": [ "207", "300", "407" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "4. Klasse",
+      "id": 3,
+      "category": "Regnestrategier",
+      "question": "25 +38",
+      "correctAnswer": "63",
+      "incorrectAnswers": [ "10", "50", "44" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "4. Klasse",
+      "id": 4,
+      "category": "Måling",
+      "question": "Hvor mange centimeter (cm) er der i 2 meter?",
+      "correctAnswer": "200",
+      "incorrectAnswers": [ "2000", "20", "2" ],
+      "unit": "Enheden: cm"
+    },
+    {
+      "difficulty": "4. Klasse",
+      "id": 5,
+      "category": "Geometri",
+      "question": "Hvor mange sider har en pentagon?",
+      "correctAnswer": "5",
+      "incorrectAnswers": [ "4", "3", "8" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "4. Klasse",
+      "id": 6,
+      "category": "Statistik",
+      "question": "Der er en pose med 10 sorte, 5 blå og 3 grønne bolde. Hvad er sansynligheden for at trække en blå bold?",
+      "correctAnswer": "28",
+      "incorrectAnswers": [ "18", "38", "5" ],
+      "unit": "Enheden: \\%"
+    },
+    {
       "difficulty": "5. Klasse",
-      "category": "Rumfang",
+      "id": 1,
+      "category": "Måling",
       "question": "Volumen af en 4cm x 3cm x 2cm box?",
       "correctAnswer": "24",
       "incorrectAnswers": [ "30", "25", "35" ],
-      "unit": "m^3"
+      "unit": "Enheden: m^3"
+    },
+    {
+      "difficulty": "5. Klasse",
+      "id": 2,
+      "category": "´Tal",
+      "question": "Hvilket tal er større: 2,5 eller 2,05?",
+      "correctAnswer": "2,5",
+      "incorrectAnswers": [ "2,05", "3,5", "3,05" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "5. Klasse",
+      "id": 3,
+      "category": "Regnestrategier",
+      "question": "Du køber en is til 12 kr. og en sodavand til 15 kr. Hvor meget skal du betale?",
+      "correctAnswer": "27",
+      "incorrectAnswers": [ "50", "100", "10" ],
+      "unit": "Enheden: Kr."
+    },
+    {
+      "difficulty": "5. Klasse",
+      "id": 4,
+      "category": "Måling",
+      "question": "Et rektangel har en længde på 8 cm og en bredde på 5 cm. Hvad er arealet?",
+      "correctAnswer": "40",
+      "incorrectAnswers": [ "20", "41", "30" ],
+      "unit": "Enheden: cm^2"
+    },
+    {
+      "difficulty": "5. Klasse",
+      "id": 5,
+      "category": "Sandsynlighed",
+      "question": "Du kaster en terning. Hvad er sandsynligheden for at slå en 6'er?",
+      "correctAnswer": "1/6",
+      "incorrectAnswers": [ "1/3", "1/5", "1/2" ],
+      "unit": ""
     },
     {
       "difficulty": "6. Klasse",
+      "id": 1,
       "category": "Primtal",
       "question": "Nævn de første tre tal i det primære talmønster?",
       "correctAnswer": "2, 3, 5",
@@ -25,7 +109,35 @@
       "unit": ""
     },
     {
+      "difficulty": "6. Klasse",
+      "id": 2,
+      "category": "Tal",
+      "question": "Hvad er 25\\% af 200?",
+      "correctAnswer": "50",
+      "incorrectAnswers": [ "50", "100", "10" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "6. Klasse",
+      "id": 3,
+      "category": "Regnestrategier",
+      "question": "En bil kører 80 km/t. Hvor langt kører den på 2 timer?",
+      "correctAnswer": "160",
+      "incorrectAnswers": [ "160" ],
+      "unit": "Enheden: km"
+    },
+    {
+      "difficulty": "6. Klasse",
+      "id": 4,
+      "category": "Måling",
+      "question": "En kasse er 10 cm lang, 5 cm bred og 3 cm høj. Hvad er rumfanget?",
+      "correctAnswer": "150",
+      "incorrectAnswers": [ "100", "50", "200" ],
+      "unit": "Enheden: cm^3"
+    },
+    {
       "difficulty": "7. Klasse",
+      "id": 1,
       "category": "Ligninger og funktioner",
       "question": "3x + 4 =16",
       "correctAnswer": "x = 4",
@@ -33,7 +145,53 @@
       "unit": ""
     },
     {
+      "difficulty": "7. Klasse",
+      "id": 2,
+      "category": "Tal",
+      "question": "Skriv 3/4 som decimaltal.",
+      "correctAnswer": "0,75",
+      "incorrectAnswers": [ "0,50", "1", "0,25" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "7. Klasse",
+      "id": 3,
+      "category": "Algebra",
+      "question": "Løs ligningen 2x + 5 = 11.",
+      "correctAnswer": "x = 3",
+      "incorrectAnswers": [ "x = 1", "x = 10", "x = 13" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "7. Klasse",
+      "id": 4,
+      "category": "Geometri",
+      "question": "Hvad er summen af vinklerne i en trekant?",
+      "correctAnswer": "180",
+      "incorrectAnswers": [ "90", "45", "100" ],
+      "unit": "Enheden: x^o (grader)"
+    },
+    {
+      "difficulty": "7. Klasse",
+      "id": 5,
+      "category": "Måling",
+      "question": "En cirkel med en radius på 7 cm. Hvad er omkredsen?",
+      "correctAnswer": "44",
+      "incorrectAnswers": [ "20", "40", "100" ],
+      "unit": "Enheden: cm"
+    },
+    {
+      "difficulty": "7. Klasse",
+      "id": 6,
+      "category": "Sandsynlighed",
+      "question": "Du trækker et kort fra et sæt spillekort med 52 kort. Hvad er sandsynligheden for at trække en spar?",
+      "correctAnswer": "1/4",
+      "incorrectAnswers": [ "1/2", "2/5", "1/6" ],
+      "unit": ""
+    },
+    {
       "difficulty": "8. Klasse",
+      "id": 1,
       "category": "Ligninger og funktioner",
       "question": "y = 3x + 2",
       "correctAnswer": "Gradient = 3",
@@ -41,15 +199,89 @@
       "unit": ""
     },
     {
-      "difficulty": "9. Klasse",
+      "difficulty": "8. Klasse",
+      "id": 2,
+      "category": "Tal",
+      "question": " Beregn √25 + √16",
+      "correctAnswer": "9",
+      "incorrectAnswers": [ "56", "42", "21" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "8. Klasse",
+      "id": 3,
+      "category": "Algebra",
+      "question": "Løs ligningen x² - 4 = 0",
+      "correctAnswer": "x = 2 || x = -2",
+      "incorrectAnswers": [ "x = 0", "x = 5 || x = -5", "x = 10 || x = -10" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "8. Klasse",
+      "id": 4,
       "category": "Geometri",
+      "question": "Hvad er formlen for at beregne arealet af en trekant?",
+      "correctAnswer": "1/2 * g * h",
+      "incorrectAnswers": [ "1 * g * h", "2 * g * h", "1/2 * g" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "8. Klasse",
+      "id": 5,
+      "category": "Måling",
+      "question": "En cylinder har en radius på 5 cm og en højde på 10 cm. Hvad er rumfanget?",
+      "correctAnswer": "785",
+      "incorrectAnswers": [ "800", "500", "1000" ],
+      "unit": "Enheden: cm^3"
+    },
+    {
+      "difficulty": "9. Klasse",
+      "id": 1,
+      "category": "Måling",
       "question": "Omkredsen af en cirkel med en diameter på 10 cm",
       "correctAnswer": "31,4",
       "incorrectAnswers": [ "4", "23", "30" ],
-      "unit": "cm"
+      "unit": "Enheden: cm"
+    },
+    {
+      "difficulty": "9. Klasse",
+      "id": 2,
+      "category": "Tal",
+      "question": "Skriv 0,0001 i potensform",
+      "correctAnswer": "10^-4",
+      "incorrectAnswers": [ "10^-10", "1^-10000", "10^40" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "9. Klasse",
+      "id": 3,
+      "category": "Geometri",
+      "question": "Skriv pythagoras formel for beregning af hypotenusen i en retvinklet trekant",
+      "correctAnswer": "a^2 + b^2 = c^2",
+      "incorrectAnswers": [ "a + b = c", "c + b = a", "a^5 + b^5 = c^5" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "9. Klasse",
+      "id": 4,
+      "category": "Måling",
+      "question": "En kugle har en radius på 4 cm. Hvad er overfladearealet?",
+      "correctAnswer": "201",
+      "incorrectAnswers": [ "200", "100", "2" ],
+      "unit": "Enheden: cm^2"
+    },
+    {
+      "difficulty": "9. Klasse",
+      "id": 5,
+      "category": "Sandsynlighed",
+      "question": "Du kaster to terninger. Hvad er sandsynligheden for at slå to 6'ere?",
+      "correctAnswer": "1/36",
+      "incorrectAnswers": [ "1/6", "1/2", "1/50" ],
+      "unit": ""
     },
     {
       "difficulty": "10. Klasse",
+      "id": 1,
       "category": "Ligninger og funktioner",
       "question": "x^2-5x+6=0",
       "correctAnswer": "x=2 || x=3",

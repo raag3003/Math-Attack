@@ -80,6 +80,7 @@ namespace Webprogrammering
             // Map SignalR hubs
             app.MapHub<ChatHub>("/chatHub");
             app.MapHub<MathHub>("/mathHub");
+            app.MapHub<GameHub>("/gameHub");
 
             // Configure API endpoint for our math questions
             app.MapGet("/questions", () => data); //The API is "https://localhost:44300/questions/"
