@@ -43,22 +43,25 @@
 
         <!--Game area-->
         <div class="gameArena">
+            <!--Player 1-->
             <div class="player1">
                 <p>Player 1</p>
             </div>
-            <div class="player-input">
-                <input type="text" class="answer-input" placeholder="Indtast dit svar her">
-                <button class="submit-answer btn-primary">Svar</button>
-            </div>
+            <!--Questions-->
             <div class="questions-container">
                 <template id="question-template">
                     <div class="question-box">
                         <div class="question"></div>
                         <div class="unit"></div>
-                        <div style="display: inline" class="answers"></div>
+                        <div class="answers"></div>
+                        <div class="answer-input-container">
+                            <input type="text" class="answer-input" placeholder="Indtast dit svar her">
+                            <button class="submit-answer btn-primary">Svar</button>
+                        </div>
                     </div>
                 </template>
             </div>
+            <!--Player 2-->
             <div class="player2">
                 <p>Player 2</p>
             </div>

@@ -112,7 +112,7 @@
       "difficulty": "6. Klasse",
       "id": 2,
       "category": "Tal",
-      "question": "Hvad er 25\\% af 200?",
+      "question": "Hvad er 25% af 200?",
       "correctAnswer": "50",
       "incorrectAnswers": [ "50", "100", "10" ],
       "unit": ""

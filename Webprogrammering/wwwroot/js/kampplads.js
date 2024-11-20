@@ -18,7 +18,13 @@ async function fetchQuestions() {
 // Starts the game right after the countdown is finsihed
 async function startGame() {
     await fetchQuestions();
+    // Just to debug some of my code to see if we get questionOrder from the server
+    if (!questionOrder || !questionOrder.length) {
+        console.error("questionOrder er ikke initialiseret korrekt");
+        return;
+    }
     document.querySelector('.gameArena').style.display = 'block';
+    currentQuestionIndex = 0; // Reset index when a new game is started
     spawnQuestions();
 
     // When the user playing a new game without refreching the site, will this ensure that all the quetions is active again
@@ -31,6 +37,17 @@ function addNewQuestion() {
     const question = questions.find(q =>
         q.difficulty === selectedDifficulty && q.id === currentQuestionId
     );
+    // 1. debug measage to see if questionOrder is empty or if currentQuestionIndex is too big
+    if (!questionOrder || !questionOrder.length || currentQuestionIndex >= questionOrder.length) {
+        console.log("Ikke flere spørgsmål tilgængelige");
+        return;
+    }
+    // 2. debug measage checks to see if there is or not a ID matching with a question
+    if (!question) {
+        console.log("Kunne ikke finde spørgsmål med ID:", currentQuestionId);
+        currentQuestionIndex++;
+        return;
+    }
     currentQuestionIndex++; 
 
     const template = document.getElementById('question-template'); // Clone the template from the cshtml
@@ -38,12 +55,6 @@ function addNewQuestion() {
     questionElement.querySelector('.question').textContent = question.question; // Inserting questions from JSON file into the DIV tag "question"
     const answersContainer = questionElement.querySelector('.answers'); // Finding the element with the class ".answers"
     const allAnswers = [question.correctAnswer, ...question.incorrectAnswers]; // Combine correct and incorrect answers
-
-    // Checks if there is more quetions, if not a message will be printed to the user
-    if (currentQuestionIndex >= questionOrder.length) {
-        alert("Ikke flere spørgsmål tilgængelige i denne sværhedsgrad");
-        return;
-    }
 
     // If and only if the answer is numeric (with or without unit), the user can use a input field else is it multiple choice
     if (allAnswers.every(answer => !isNaN(answer))) {
@@ -54,21 +65,25 @@ function addNewQuestion() {
             MathJax.typeset([unitElement]);
         }
 
-        // Connect the existing input field to the same questions from the JSON file
-        const answerInput = document.querySelector('.answer-input');
-        const submitButton = document.querySelector('.submit-answer');
+        // Getting the input fieald and buttom from either ".answer-input" or ".submit-answer"
+        const answerInput = questionElement.querySelector('.answer-input');
+        const submitButton = questionElement.querySelector('.submit-answer');
 
-        // Adding event listener for Enter key
+        // Adding a event listeners for every question that spawns
         answerInput.addEventListener('keypress', function (event) {
             if (event.key === 'Enter') {
                 event.preventDefault();
-                checkAnswerInput(answerInput, question.correctAnswer);
+                checkAnswer(answerInput, question.correctAnswer);
             }
         });
 
-        submitButton.onclick = () => checkAnswerInput(answerInput, question.correctAnswer);
+        submitButton.addEventListener('click', () => {
+            checkAnswer(answerInput, question.correctAnswer);
+        });
     } else {
         // For multiple choice questions, create answer buttons (Multiple choice quetions is only for long answers where there can be spelling errors)
+        questionElement.classList.add('multiple-choice'); // Adding a multiple-choice-class to the question-box-element
+
         allAnswers.forEach(answer => {
             const button = document.createElement('button');
             button.className = 'answer-button';
@@ -89,14 +104,14 @@ function addNewQuestion() {
 
 function spawnQuestions() {
     // While-loop is only running one time when the site reloads, and checks if there is at least 2 questions at the start of the game
-    /*while (currentQuestions.length < 2) {
+    /*while (currentQuestions.length <= 2) {
         addNewQuestion();
     }*/
 
     let canSpawn = true; 
     // setInterval is running every 3 seconds of the game, and checks if there is more than 4 questions before spawing a new quetion
     setInterval(() => {
-        if (canSpawn && currentQuestions.length >= 4) {
+        if (canSpawn && currentQuestions.length >= 3) {
             return;
         } else {
             addNewQuestion();
@@ -106,17 +121,25 @@ function spawnQuestions() {
                 canSpawn = true;
             }, 3000);
         }
-    }, 100); // Kør tjek hyppigere, mens spawn kontrolleres af boolianen canSpawn
+    }, 100);
 }
 
-function checkAnswer(button, correctAnswer) {
-    const isCorrect = button.textContent.trim() === correctAnswer;
-    const questionBox = button.closest('.question-box');
+function checkAnswer(element, correctAnswer) {
+    let isCorrect;
+    const questionBox = element.closest('.question-box');
+
+    if (element.tagName.toLowerCase() === 'input') {
+        // Checks if the element is an input field, before we comparring the users answer to the correct answer
+        isCorrect = element.value.trim() === correctAnswer;
+    } else {
+        // Checks if the element is a buttom (multiple choice), before we comparring the users answer to the correct answer
+        isCorrect = element.textContent.trim() === correctAnswer;
+    }
 
     // If the answer is correct it call the css to make the question green, for then removeing it
     if (isCorrect) {
         // Calls css script
-        button.classList.add('correct');
+        element.classList.add('correct');
 
         // Removeing the question
         setTimeout(() => {
@@ -131,7 +154,7 @@ function checkAnswer(button, correctAnswer) {
         connection.invoke("CorrectAnswer", connection.connectionId);
     } else {
         // If the answer is incorrect it call the css to make the question red
-        button.classList.add('incorrect');
+        element.classList.add('incorrect');
     }
 }
 // checkAnswerInput-function is doing more or less the same thing as checkAnswer-function, just for the input field instead of the multiple choice buttons
