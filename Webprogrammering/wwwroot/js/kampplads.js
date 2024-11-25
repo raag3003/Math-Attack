@@ -70,7 +70,7 @@ function addNewQuestion() {
         const submitButton = questionElement.querySelector('.submit-answer');
 
         // Adding a event listeners for every question that spawns
-        answerInput.addEventListener('keypress', function (event) {
+        answerInput.addEventListener('keydown', function (event) {
             if (event.key === 'Enter') {
                 event.preventDefault();
                 checkAnswer(answerInput, question.correctAnswer);
@@ -108,29 +108,36 @@ function spawnQuestions() {
         addNewQuestion();
     }*/
 
-    let canSpawn = true; 
-    // setInterval is running every 3 seconds of the game, and checks if there is more than 4 questions before spawing a new quetion
+    // setInterval is running every 1 seconds of the game, and checks if there is more than 3 questions before spawing a new quetion
     setInterval(() => {
-        if (canSpawn && currentQuestions.length >= 3) {
-            return;
-        } else {
+        if (currentQuestions.length < 3) {
             addNewQuestion();
-            canSpawn = false;
-
-            setTimeout(() => {
-                canSpawn = true;
-            }, 3000);
         }
-    }, 100);
+    }, 1000);
 }
 
 function checkAnswer(element, correctAnswer) {
     let isCorrect;
     const questionBox = element.closest('.question-box');
+    const invalidFeedback = questionBox.querySelector('.invalid-feedback');
+    const validFeedback = questionBox.querySelector('.valid-feedback');
+    const inputField = questionBox.querySelector('.answer-input');
 
     if (element.tagName.toLowerCase() === 'input') {
         // Checks if the element is an input field, before we comparring the users answer to the correct answer
         isCorrect = element.value.trim() === correctAnswer;
+
+        // Show feedback to the user if the answer in the input-field is correct or wrong
+        if (!isCorrect) {
+            invalidFeedback.style.display = 'block';
+
+            // Adding an event listener to hide feedback, when the user writes a new answer
+            element.addEventListener('input', function () {
+                invalidFeedback.style.display = 'none';
+            }, { once: true });
+        } else {
+            validFeedback.style.display = 'block';
+        }
     } else {
         // Checks if the element is a buttom (multiple choice), before we comparring the users answer to the correct answer
         isCorrect = element.textContent.trim() === correctAnswer;
@@ -140,6 +147,7 @@ function checkAnswer(element, correctAnswer) {
     if (isCorrect) {
         // Calls css script
         element.classList.add('correct');
+        inputField.classList.add('correct');
 
         // Removeing the question
         setTimeout(() => {
@@ -155,26 +163,6 @@ function checkAnswer(element, correctAnswer) {
     } else {
         // If the answer is incorrect it call the css to make the question red
         element.classList.add('incorrect');
-    }
-}
-// checkAnswerInput-function is doing more or less the same thing as checkAnswer-function, just for the input field instead of the multiple choice buttons
-function checkAnswerInput(inputField, correctAnswer) {
-    const userAnswer = inputField.value.trim();
-    const isCorrect = userAnswer === correctAnswer;
-    const questionBox = inputField.closest('.question-box');
-
-    if (isCorrect) {
-        inputField.classList.add('correct');
-        setTimeout(() => {
-            const index = currentQuestions.findIndex(q => q.element === questionBox);
-            if (index > -1) {
-                currentQuestions.splice(index, 1);
-                questionBox.remove();
-            }
-        }, 500);
-
-        connection.invoke("CorrectAnswer", connection.connectionId);
-    } else {
         inputField.classList.add('incorrect');
     }
 }

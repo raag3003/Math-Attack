@@ -111,7 +111,7 @@
     background: white;
     border: 1px solid #333;
     padding: 2px;
-    animation: fallDown 10s linear forwards; /* It takes 10s for a quetion to fall from top to bottom */
+    animation: fallDown 3s linear forwards; /* It takes 3s for a quetion to fall from top to bottom */
     border-radius: 5px;
     min-width: 320px;
     min-height: 40px;
@@ -141,7 +141,7 @@
 }
 .answer-button.incorrect {
     background-color: red;
-    pointer-events: none; /* Erstatter disabled attributten */
+    pointer-events: none;
 }
 .answers {
     display: flex;
@@ -157,10 +157,32 @@
     margin-top: 10px;
 }
 .answer-input {
-    padding: 5px;
+    padding: 3px;
     border: 1px solid #ccc;
     border-radius: 4px;
     flex: 1;
+}
+.invalid-feedback {
+    display: none;
+    border-radius: 5px;
+    background-color: red;
+    color: black;
+    font-size: 18px;
+    margin: 0px;
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+}
+.valid-feedback {
+    display: none;
+    border-radius: 5px;
+    background-color: green;
+    color: black;
+    font-size: 18px;
+    margin: 0px;
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
 }
 .submit-answer {
     padding: 5px 15px;
