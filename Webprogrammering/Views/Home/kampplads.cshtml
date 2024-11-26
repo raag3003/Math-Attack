@@ -37,37 +37,65 @@
                         </div>
                     </div>
                 </div>
+                <!-- End screen after the game is finished -->
+                <div class="gameOverScreen" style="display: none;">
+                    <h2 id="gameResult"></h2>
+                    <div class="stats-container">
+                        <h3>Statistik</h3>
+                        <div class="stats">
+                            <p>Korrekte svar: <span id="correctAnswers">0</span></p>
+                            <p>Forkerte svar: <span id="wrongAnswers">0</span></p>
+                        </div>
+                    </div>
+
+                    <div class="game-over-buttons">
+                        <button onclick="window.location.reload()" class="btn btn-primary">Ny kamp</button>
+                        <button id="rematchButton" class="btn btn-warning" onclick="requestRematch()">Omkamp</button>
+                        <button type="button" onclick="window.location.href='@Url.Action("fantasyVillage", "Home") .village-background';" class="btn btn-secondary">Gå til landsbyen</button>
+                    </div>
+                </div>
             </div>
         </div>
 
 
         <!--Game area-->
+        <!-------------------------------------------------------------------------------------------------------------------------------------------------->
         <div class="gameArena">
+            <div class="user-health-bar" style="display: inline-block">
+                <p>Din Livskraft</p>
+                <div class="progress" style="width: 100px">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%</div>
+                </div>
+            </div>
+            <div class="opponent-health-bar" style="display: inline-block">
+                <p>Modstanderens Livskraft</p>
+                <div class="progress" style="width: 100px">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%</div>
+                </div>
+            </div>
             <!--Player 1-->
             <div class="player1">
                 <p>Player 1</p>
             </div>
             <!--Questions-->
-            <div class="questions-container">
-                <template id="question-template">
-                    <div class="question-box">
-                        <div class="question"></div>
-                        <div class="unit"></div>
-                        <div class="answers"></div>
-                        <div class="answer-input-container">
-                            <input type="text" class="answer-input" placeholder="Indtast dit svar her">
-                            <button class="submit-answer btn-primary">Svar</button><br />
-                        </div>
-                        <div class="invalid-feedback"><strong>Forkert svar, prøv igen 😟</strong></div>
-                        <div class="valid-feedback"><strong>Korrekt! 🎉</strong></div>
+            <template id="question-template">
+                <div class="question-box">
+                    <div class="question"></div>
+                    <div class="unit"></div>
+                    <div class="answers"></div>
+                    <div class="answer-input-container">
+                        <input type="text" class="answer-input" placeholder="Indtast dit svar her">
+                        <button class="submit-answer btn-primary">Svar</button><br />
                     </div>
-                </template>
-            </div>
+                    <div class="invalid-feedback"><strong>Forkert svar, prøv igen 😟</strong></div>
+                    <div class="valid-feedback"><strong>Korrekt! 🎉</strong></div>
+                </div>
+            </template>
+            <div class="questions-container"></div>
             <!--Player 2-->
             <div class="player2">
                 <p>Player 2</p>
             </div>
-
         </div>
 
         <!-- Refference to online SignalR library -->

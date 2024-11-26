@@ -31,6 +31,32 @@
 }
 
 
+.user-health-bar .progress{
+    position: absolute;
+    top: 125px;
+    left: 5px;
+    margin-left: 0px;
+}
+.opponent-health-bar .progress{
+    position: absolute;
+    top: 125px;
+    right: 5px;
+    margin-right: 0px;
+}
+.user-health-bar p {
+    position: absolute;
+    left: 10px;
+    margin-left: 0px;
+}
+
+.opponent-health-bar p {
+    position: absolute;
+    right: 10px;
+    margin-right: 0px;
+}
+
+
+
 /*Modal Box*/
 /*----------------------------------------------------------------------------------*/
 /* The overall stylling to the Modal */

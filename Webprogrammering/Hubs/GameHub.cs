@@ -6,10 +6,11 @@ namespace Webprogrammering.Hubs
 {
     public class GameHub : Hub
     {
-        // A list over all users wating for an opponenent
-        private static Dictionary<string, List<string>> waitingPlayers = new();
+        private static Dictionary<string, List<string>> waitingPlayers = new(); // A list over all users and there corresponding choosen difficulty, wating for an opponenent
+        private static Dictionary<string, string> playerDifficulties = new(); // A list over all users and there corresponding choosen difficulty
         // An object with two strings (two users), that make sure these two users doesn't interrupt with the other users watting for a opponent.
         private static Dictionary<string, string> playerMatches = new();
+        private static Dictionary<string, bool> rematchRequests = new(); // A list over which two users that is eligible to play a rematch against each other, and if they have said yes
         private static Dictionary<string, int> QuestionsPerDifficulty = new()
         {
             // Remember to update the number of quetions whenever quetions to the JSON-file gets updated or deleted
@@ -32,6 +33,7 @@ namespace Webprogrammering.Hubs
             }
 
             waitingPlayers[difficulty].Add(connectionId);
+            playerDifficulties[connectionId] = difficulty; // Store users choosen difficulty
 
             if (waitingPlayers[difficulty].Count >= 2)
             {
@@ -71,7 +73,8 @@ namespace Webprogrammering.Hubs
                 // Inform the user that the connecetion is lost
                 await Clients.Client(opponent).SendAsync("UserLeftBehind");
 
-                // Remove both palyers from the object "playerMatches" so they can search for a new match if they want
+                // Remove both palyers from the object "playerMatches" and "playerDifficulties" so they can search for a new match and choose a new difficulty if they want
+                playerDifficulties.Remove(disconnectedPlayer);
                 playerMatches.Remove(disconnectedPlayer);
                 playerMatches.Remove(opponent);
             }
@@ -83,8 +86,8 @@ namespace Webprogrammering.Hubs
         {
             if (playerMatches.TryGetValue(playerId, out string opponent))
             {
-                // Send message to the oppoent that the question is answered corectly and they will lose some lives
-                await Clients.Client(opponent).SendAsync("OpponentAnsweredCorrectly");
+                // Synchronizing the 20% damage to the opponent
+                await Clients.Client(opponent).SendAsync("TakeDamage", 20);
             }
         }
 
@@ -103,6 +106,33 @@ namespace Webprogrammering.Hubs
             var shuffledIds = questionIds.OrderBy(x => rng.Next()).ToList();
 
             return shuffledIds;
+        }
+
+        // Synchronizing the rematch funtionalities, so when both users press rematch it will synchronize it and start the game
+        public async Task RequestRematch(string playerId)
+        {
+            if (playerMatches.TryGetValue(playerId, out string opponent))
+            {
+                await Clients.Client(opponent).SendAsync("RematchRequested");
+                rematchRequests[playerId] = true;
+
+                // If both players/clients have requested a rematch
+                if (rematchRequests.ContainsKey(opponent) && rematchRequests[opponent])
+                {
+                    // Resests both the requests
+                    rematchRequests.Remove(playerId);
+                    rematchRequests.Remove(opponent);
+
+                    string gameGroup = $"game_{playerId}_{opponent}";
+
+                    // Looking in the dictionary "playerDifficulties" to match these player ID's with whose in "rematchRequests" to see if both players have submitted a rematch
+                    if (playerDifficulties.TryGetValue(playerId, out string difficulty))
+                    {
+                        var questionOrder = GenerateQuestionOrder(difficulty);
+                        await Clients.Clients(playerId, opponent).SendAsync("GameStart", gameGroup, questionOrder);
+                    }
+                }
+            }
         }
     }
 }
