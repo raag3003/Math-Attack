@@ -55,6 +55,141 @@
       "unit": "Enheden: \\%"
     },
     {
+      "difficulty": "4. Klasse",
+      "id": 7,
+      "category": "Regnestrategier",
+      "question": "Hvad er 358 + 217?",
+      "correctAnswer": "575",
+      "incorrectAnswers": [ "565", "675", "375" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "4. Klasse",
+      "id": 8,
+      "category": "Regnestrategier",
+      "question": "Du har 8 æbler og spiser 3. Hvor mange æbler har du tilbage?",
+      "correctAnswer": "5",
+      "incorrectAnswers": [ "11", "2", "6" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "4. Klasse",
+      "id": 9,
+      "category": "Tal",
+      "question": "Hvilket tal er større: 299 eller 301?",
+      "correctAnswer": "301",
+      "incorrectAnswers": [ "299", "201", "399" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "4. Klasse",
+      "id": 10,
+      "category": "Måling",
+      "question": "Hvor lang tid er der mellem kl. 8:00 og kl. 9:30?",
+      "correctAnswer": "1 time og 30 minutter",
+      "incorrectAnswers": [ "30 minutter", "2 timer", "1 time" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "4. Klasse",
+      "id": 11,
+      "category": "Sandsynlighed",
+      "question": "Hvis du kaster en terning, hvad er chancen for at slå en 1'er?",
+      "correctAnswer": "1/6",
+      "incorrectAnswers": [ "1/2", "3/6", "5/6" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "4. Klasse",
+      "id": 12,
+      "category": "Tal",
+      "question": "Hvordan staves tallet 473 med ord.",
+      "correctAnswer": "Fire hundrede og treoghalvfjerds",
+      "incorrectAnswers": [ "Fire hundrede og syvoghalvfjerds", "Tre hundrede og treoghalvfjerds", "Fire hundrede og treogtyve" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "4. Klasse",
+      "id": 13,
+      "category": "Regnestrategier",
+      "question": "Hvad er 25 * 4?",
+      "correctAnswer": "100",
+      "incorrectAnswers": [ "50", "29", "75" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "4. Klasse",
+      "id": 14,
+      "category": "Regnestrategier",
+      "question": "Del 36 æbler ligeligt mellem 6 personer. Hvor mange æbler får hver person?",
+      "correctAnswer": "6",
+      "incorrectAnswers": [ "30", "12", "4" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "4. Klasse",
+      "id": 15,
+      "category": "Geometri",
+      "question": "Hvad er omkredsen af en firkant, hvor alle sider er 5 cm?",
+      "correctAnswer": "20",
+      "incorrectAnswers": [ "10", "25", "15" ],
+      "unit": "Enheden: cm"
+    },
+    {
+      "difficulty": "4. Klasse",
+      "id": 16,
+      "category": "Tal",
+      "question": "Rund tallet 178,5 op til nærmeste hundrede.",
+      "correctAnswer": "200",
+      "incorrectAnswers": [ "100", "180", "170" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "4. Klasse",
+      "id": 17,
+      "category": "Regnestrategier",
+      "question": "Hvad er 73 - 28?",
+      "correctAnswer": "45",
+      "incorrectAnswers": [ "55", "40", "101" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "4. Klasse",
+      "id": 18,
+      "category": "Regnestrategier",
+      "question": "Hvad er 6 * 9?",
+      "correctAnswer": "54",
+      "incorrectAnswers": [ "15", "69", "48" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "4. Klasse",
+      "id": 19,
+      "category": "Geometri",
+      "question": "Hvilken figur har flest sider: en trekant eller en sekskant?",
+      "correctAnswer": "Sekskant",
+      "incorrectAnswers": [ "Trekant", "Firkant", "Cirkel" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "4. Klasse",
+      "id": 20,
+      "category": "Tal",
+      "question": "Hvilket tal er 10 mere end 52?",
+      "correctAnswer": "62",
+      "incorrectAnswers": [ "42", "53", "512" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "4. Klasse",
+      "id": 21,
+      "category": "Regnestrategier",
+      "question": "Løs regnestykket: 15 + 8 - 3",
+      "correctAnswer": "20",
+      "incorrectAnswers": [ "26", "10", "13" ],
+      "unit": ""
+    },
+    {
       "difficulty": "5. Klasse",
       "id": 1,
       "category": "Måling",
@@ -93,10 +228,136 @@
     {
       "difficulty": "5. Klasse",
       "id": 5,
-      "category": "Sandsynlighed",
-      "question": "Du kaster en terning. Hvad er sandsynligheden for at slå en 6'er?",
-      "correctAnswer": "1/6",
-      "incorrectAnswers": [ "1/3", "1/5", "1/2" ],
+      "category": "Regnestrategier",
+      "question": "Hvad er 1245 + 876?",
+      "correctAnswer": "2121",
+      "incorrectAnswers": [ "2021", "2111", "2221" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "5. Klasse",
+      "id": 6,
+      "category": "Regnestrategier",
+      "question": "En kage er delt i 12 stykker. Du spiser 3/4 af kagen. Hvor mange stykker har du spist?",
+      "correctAnswer": "9",
+      "incorrectAnswers": [ "3", "4", "6" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "5. Klasse",
+      "id": 7,
+      "category": "Tal",
+      "question": "Hvad er decimaltallet 0,75 som en brøk.",
+      "correctAnswer": "3/4",
+      "incorrectAnswers": [ "1/4", "7/5", "75/100" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "5. Klasse",
+      "id": 8,
+      "category": "Måling",
+      "question": "Hvad er arealet af et rektangel med længden 8 cm og bredden 5 cm?",
+      "correctAnswer": "40",
+      "incorrectAnswers": [ "13", "26", "32" ],
+      "unit": "Enheden: cm^2"
+    },
+    {
+      "difficulty": "5. Klasse",
+      "id": 9,
+      "category": "Tal",
+      "question": "Hvad er 10\\% af 200?",
+      "correctAnswer": "20",
+      "incorrectAnswers": [ "10", "100", "2" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "5. Klasse",
+      "id": 10,
+      "category": "Regnestrategier",
+      "question": "Hvad er 3,5 * 10?",
+      "correctAnswer": "35",
+      "incorrectAnswers": [ "350", "3,50", "0,35" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "5. Klasse",
+      "id": 11,
+      "category": "Regnestrategier",
+      "question": "Du køber 3 sodavand til 12 kr. stykket. Hvor meget skal du betale?",
+      "correctAnswer": "36",
+      "incorrectAnswers": [ "15", "24", "48" ],
+      "unit": "Enheden: kr."
+    },
+    {
+      "difficulty": "5. Klasse",
+      "id": 12,
+      "category": "Geometri",
+      "question": "Hvad er volumen af en kube med sidelængde 4 cm?",
+      "correctAnswer": "64",
+      "incorrectAnswers": [ "12", "16", "48" ],
+      "unit": "cm^3"
+    },
+    {
+      "difficulty": "5. Klasse",
+      "id": 13,
+      "category": "Tal",
+      "question": "Rund tallet 3,14159 op til to decimaler.",
+      "correctAnswer": "3,14",
+      "incorrectAnswers": [ "3,1", "3,15", "3,142" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "5. Klasse",
+      "id": 14,
+      "category": "Regnestrategier",
+      "question": "Hvad er 5/8 + 1/4?",
+      "correctAnswer": "7/8",
+      "incorrectAnswers": [ "6/12", "6/8", "1" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "5. Klasse",
+      "id": 15,
+      "category": "Regnestrategier",
+      "question": "Hvad er 72 divideret 9?",
+      "correctAnswer": "8",
+      "incorrectAnswers": [ "9", "7", "63" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "5. Klasse",
+      "id": 16,
+      "category": "Geometri og måling",
+      "question": "Hvad er navnet på den figur, hvis alle sider er lige lange?",
+      "correctAnswer": [ "Firkant", "Rombe" ],
+      "incorrectAnswers": [ "Femkant", "Trekant", "Cirkel" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "5. Klasse",
+      "id": 18,
+      "category": "Statistik",
+      "question": "Hvis du kaster en mønt 10 gange, hvor mange gange forventes det, at du får plat?",
+      "correctAnswer": "5",
+      "incorrectAnswers": [ "10", "0", "41" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "5. Klasse",
+      "id": 19,
+      "category": "Tal",
+      "question": "Hvad er 100 mindre end 345?",
+      "correctAnswer": "245",
+      "incorrectAnswers": [ "445", "335", "235" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "5. Klasse",
+      "id": 20,
+      "category": "Regnestrategier",
+      "question": "Løs regnestykket: (4 + 6) * 3",
+      "correctAnswer": "30",
+      "incorrectAnswers": [ "13", "22", "10" ],
       "unit": ""
     },
     {
@@ -112,7 +373,7 @@
       "difficulty": "6. Klasse",
       "id": 2,
       "category": "Tal",
-      "question": "Hvad er 25% af 200?",
+      "question": "Hvad er 25\\% af 200?",
       "correctAnswer": "50",
       "incorrectAnswers": [ "50", "100", "10" ],
       "unit": ""
@@ -136,9 +397,144 @@
       "unit": "Enheden: cm^3"
     },
     {
+      "difficulty": "6. Klasse",
+      "id": 5,
+      "category": "Regnestrategier",
+      "question": "3456 - 1987",
+      "correctAnswer": "1469",
+      "incorrectAnswers": [ "1479", "1569", "2569" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "6. Klasse",
+      "id": 6,
+      "category": "Regnestrategier",
+      "question": "En pizza er delt i 8 stykker. Hvis du spiser 2/8 af pizzaen, hvor mange stykker har du så spist?",
+      "correctAnswer": "2",
+      "incorrectAnswers": [ "4", "6", "8" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "6. Klasse",
+      "id": 6,
+      "category": "Tal",
+      "question": "Hvad er brøken 5/8 som et decimaltal?",
+      "correctAnswer": "0,625",
+      "incorrectAnswers": [ "0,58", "1,6", "0,85" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "6. Klasse",
+      "id": 7,
+      "category": "Geometri",
+      "question": "Beregn omkredsen af en cirkel med en radius på 5 cm. Brug π = 3,14.",
+      "correctAnswer": "31,4",
+      "incorrectAnswers": [ "15,7", "78,5", "10" ],
+      "unit": "Enheden: cm"
+    },
+    {
+      "difficulty": "6. Klasse",
+      "id": 8,
+      "category": "Tal",
+      "question": "Hvad er 25\\% af 80?",
+      "correctAnswer": "20",
+      "incorrectAnswers": [ "25", "40", "60" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "6. Klasse",
+      "id": 9,
+      "category": "Regnestrategier",
+      "question": "Hvad er 4,5 diveret med 0,5?",
+      "correctAnswer": "9",
+      "incorrectAnswers": [ "4", "2,25", "0,9" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "6. Klasse",
+      "id": 10,
+      "category": "Regnestrategier",
+      "question": "Du har 100 kr. og køber en bog til 60 kr. og en sodavand til 15 kr. Hvor mange penge har du tilbage?",
+      "correctAnswer": "25",
+      "incorrectAnswers": [ "35", "45", "75" ],
+      "unit": "Enheden: kr."
+    },
+    {
+      "difficulty": "6. Klasse",
+      "id": 11,
+      "category": "Geometri",
+      "question": "Beregn arealet af en trekant med en base på 6 cm og en højde på 4 cm.",
+      "correctAnswer": "12",
+      "incorrectAnswers": [ "24", "10", "6" ],
+      "unit": "cm^2"
+    },
+    {
+      "difficulty": "6. Klasse",
+      "id": 12,
+      "category": "Tal",
+      "question": "Omskriv decimaltallet 0,25 til en procentdel.",
+      "correctAnswer": "25",
+      "incorrectAnswers": [ "2,5", "0,25", "250" ],
+      "unit": "\\%"
+    },
+    {
+      "difficulty": "6. Klasse",
+      "id": 13,
+      "category": "Regnestrategier",
+      "question": "1/3 * 3/4",
+      "correctAnswer": "1/4",
+      "incorrectAnswers": [ "1/12", "4/7", "3/7" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "6. Klasse",
+      "id": 14,
+      "category": "Algebra",
+      "question": "Løs ligningen: x + 5 = 12",
+      "correctAnswer": "x = 7",
+      "incorrectAnswers": [ "x = 17", "x = 2", "x = 60" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "6. Klasse",
+      "id": 15,
+      "category": "Geometri",
+      "question": "Hvilken figur har fire lige lange sider og fire rette vinkler?",
+      "correctAnswer": "Kvadrat",
+      "incorrectAnswers": [ "Rektangel", "Trekant", "Cirkel" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "6. Klasse",
+      "id": 16,
+      "category": "Sandsynlighed",
+      "question": "I en pose er der 3 røde kugler, 2 blå kugler og 1 grøn kugle. Hvad er sandsynligheden for at trække en blå kugle?",
+      "correctAnswer": "2/6",
+      "incorrectAnswers": [ "1/6", "3/6", "5/6" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "6. Klasse",
+      "id": 17,
+      "category": "Tal",
+      "question": "Hvad er det modsatte tal af -7?",
+      "correctAnswer": "7",
+      "incorrectAnswers": [ "-7", "0", "14" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "6. Klasse",
+      "id": 18,
+      "category": "Regnestrategier",
+      "question": "2 * (8 - 3) + 4",
+      "correctAnswer": "14",
+      "incorrectAnswers": [ "18", "10", "24" ],
+      "unit": ""
+    },
+    {
       "difficulty": "7. Klasse",
       "id": 1,
-      "category": "Ligninger og funktioner",
+      "category": "Algebra",
       "question": "3x + 4 =16",
       "correctAnswer": "x = 4",
       "incorrectAnswers": [ "x = 1", "x = 10", "x = 40" ],
@@ -190,9 +586,144 @@
       "unit": ""
     },
     {
+      "difficulty": "7. Klasse",
+      "id": 7,
+      "category": "Regnestrategier",
+      "question": "12345 - 9876",
+      "correctAnswer": "2469",
+      "incorrectAnswers": [ "2569", "3469", "1469" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "7. Klasse",
+      "id": 8,
+      "category": "Regnestrategier",
+      "question": "Du har 3/5 af en pizza. Din ven spiser 1/3 af din del. Hvor meget pizza har du tilbage?",
+      "correctAnswer": "2/5",
+      "incorrectAnswers": [ "1/5", "4/15", "1/3" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "7. Klasse",
+      "id": 9,
+      "category": "Tal",
+      "question": "Omskriv decimaltallet 1,25 til en brøk.",
+      "correctAnswer": "5/4",
+      "incorrectAnswers": [ "1/4", "125/100", "12/5" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "7. Klasse",
+      "id": 10,
+      "category": "Geometri",
+      "question": "Beregn arealet af en cirkel med en diameter på 10 cm. Brug π = 3,14.",
+      "correctAnswer": "78,5",
+      "incorrectAnswers": [ "31,4", "15,7", "157" ],
+      "unit": "Enheden: cm^2"
+    },
+    {
+      "difficulty": "7. Klasse",
+      "id": 11,
+      "category": "Tal",
+      "question": "En vare koster 100 kr. og er sat 30\\% ned. Hvad er den nye pris?",
+      "correctAnswer": "70",
+      "incorrectAnswers": [ "30", "130", "97" ],
+      "unit": "Enheden: kr."
+    },
+    {
+      "difficulty": "7. Klasse",
+      "id": 12,
+      "category": "Regnestrategier",
+      "question": "Hvad er 5/6 divideret med 2/3",
+      "correctAnswer": "5/4",
+      "incorrectAnswers": [ "10/9", "1/2", "1/4" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "7. Klasse",
+      "id": 13,
+      "category": "Regnestrategier",
+      "question": "Du skal cykle 12 km. Du har allerede cyklet 1/3 af vejen. Hvor langt har du cyklet?",
+      "correctAnswer": "4",
+      "incorrectAnswers": [ "8", "3", "6" ],
+      "unit": "Enheden: km"
+    },
+    {
+      "difficulty": "7. Klasse",
+      "id": 14,
+      "category": "Geometri",
+      "question": "Beregn volumen af en cylinder med en radius på 3 cm og en højde på 10 cm. Brug π = 3,14.",
+      "correctAnswer": "282,6",
+      "incorrectAnswers": [ "94,2", "30", "31,4" ],
+      "unit": "Enheden: cm^3"
+    },
+    {
+      "difficulty": "7. Klasse",
+      "id": 15,
+      "category": "Tal",
+      "question": "Omskriv brøken 3/4 til procent.",
+      "correctAnswer": "75",
+      "incorrectAnswers": [ "3/4", "34", "7,5" ],
+      "unit": "Enheden: \\%"
+    },
+    {
+      "difficulty": "7. Klasse",
+      "id": 16,
+      "category": "Regnestrategier",
+      "question": "2,5 * (3,4 + 1,6)",
+      "correctAnswer": "12,5",
+      "incorrectAnswers": [ "8,5", "5", "10" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "7. Klasse",
+      "id": 17,
+      "category": "Algebra",
+      "question": "Løs ligningen: 2x - 4 = 10",
+      "correctAnswer": "x = 7",
+      "incorrectAnswers": [ "x = 3", "x = 14", "x = 6" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "7. Klasse",
+      "id": 18,
+      "category": "Geometri",
+      "question": "Hvilken figur har 8 sider?",
+      "correctAnswer": "Oktagon",
+      "incorrectAnswers": [ "Heptagon", "Sekskant", "Dekagon" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "7. Klasse",
+      "id": 19,
+      "category": "Sandsynlighed",
+      "question": "I en kasse er der 4 røde kugler, 3 blå kugler og 2 grønne kugler. Hvad er sandsynligheden for at trække en kugle, der ikke er rød?",
+      "correctAnswer": "5/9",
+      "incorrectAnswers": [ "4/9", "2/9", "7/9" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "7. Klasse",
+      "id": 20,
+      "category": "Tal",
+      "question": "-5 + 8?",
+      "correctAnswer": "3",
+      "incorrectAnswers": [ "-3", "13", "-13" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "7. Klasse",
+      "id": 21,
+      "category": "Regnestrategier",
+      "question": "(5 + 2) * 3 - 4",
+      "correctAnswer": "17",
+      "incorrectAnswers": [ "13", "25", "19" ],
+      "unit": ""
+    },
+    {
       "difficulty": "8. Klasse",
       "id": 1,
-      "category": "Ligninger og funktioner",
+      "category": "Algebra",
       "question": "y = 3x + 2",
       "correctAnswer": "Gradient = 3",
       "incorrectAnswers": [ "Gradient = 5", "Gradient = 23", "Gradient = 50" ],
@@ -233,6 +764,150 @@
       "correctAnswer": "785",
       "incorrectAnswers": [ "800", "500", "1000" ],
       "unit": "Enheden: cm^3"
+    },
+    {
+      "difficulty": "8. Klasse",
+      "id": 6,
+      "category": "Tal",
+      "question": "Hvad er decimaltallet for brøken 3/4?",
+      "correctAnswer": "0,75",
+      "incorrectAnswers": [ "0,34", "0,25", "0,50" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "8. Klasse",
+      "id": 7,
+      "category": "Regnestrategier",
+      "question": "Beregn 25\\% af 200 kr.",
+      "correctAnswer": "50",
+      "incorrectAnswers": [ "100", "25", "75" ],
+      "unit": "Enheden: kr."
+    },
+    {
+      "difficulty": "8. Klasse",
+      "id": 8,
+      "category": "Algebra",
+      "question": "x + 5 = 12",
+      "correctAnswer": "x = 7",
+      "incorrectAnswers": [ "x = 2", "x = 17", "x = 8" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "8. Klasse",
+      "id": 9,
+      "category": "Geometri",
+      "question": "Hvad er summen af vinklerne i en trekant?",
+      "correctAnswer": "180",
+      "incorrectAnswers": [ "90", "360", "270" ],
+      "unit": "Enheden: x^o (grader)"
+    },
+    {
+      "difficulty": "8. Klasse",
+      "id": 10,
+      "category": "Vektorer",
+      "question": "Hvor ligger punktet (2, 3)?",
+      "correctAnswer": "2 højre, 3 op.",
+      "incorrectAnswers": [ "2 venstre, 3 ned.", "3 højre, 2 op.", "2 højre, 3 ned." ],
+      "unit": ""
+    },
+    {
+      "difficulty": "8. Klasse",
+      "id": 11,
+      "category": "Måling",
+      "question": "Beregn arealet af en rektangel med længden 8 cm og bredden 5 cm.",
+      "correctAnswer": "40",
+      "incorrectAnswers": [ "13", "26", "64" ],
+      "unit": "cm^2"
+    },
+    {
+      "difficulty": "8. Klasse",
+      "id": 12,
+      "category": "Sandsynlighed",
+      "question": "Hvad er sandsynligheden for at slå en 4'er med en almindelig terning?",
+      "correctAnswer": "1/6",
+      "incorrectAnswers": [ "1/2", "1/4", "1/3" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "8. Klasse",
+      "id": 13,
+      "category": "Tal",
+      "question": "Skriv brøken 5/8 som et decimaltal.",
+      "correctAnswer": "0,625",
+      "incorrectAnswers": [ "0,58", "0,85", "0,65" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "8. Klasse",
+      "id": 14,
+      "category": "Regnestrategier",
+      "question": "-3 + 7 - 2.",
+      "correctAnswer": "2",
+      "incorrectAnswers": [ "12", "-8", "4" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "8. Klasse",
+      "id": 15,
+      "category": "Algebra",
+      "question": "2x - 4 = 6",
+      "correctAnswer": "x = 5",
+      "incorrectAnswers": [ "x = 1", "x = 10", "x = 2" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "8. Klasse",
+      "id": 13,
+      "category": "Geometri",
+      "question": "Hvilke typer trekanter findes der?",
+      "correctAnswer": "Ligebenet, ligesidet, retvinklet, spidsvinklet, stumpvinklet",
+      "incorrectAnswers": [ "(Ufuldstændig liste)" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "8. Klasse",
+      "id": 13,
+      "category": "Geometri",
+      "question": "Hvad kaldes en trekant med to lige lange sider?",
+      "correctAnswer": "Ligebenet trekant",
+      "incorrectAnswers": [ "Ligesidet trekant", "Retvinklet trekant", "Stumpvinklet trekant" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "8. Klasse",
+      "id": 14,
+      "category": "Måling",
+      "question": "Beregn omkredsen af en firkant med sidelængderne 6 cm, 8 cm, 6 cm og 8 cm.",
+      "correctAnswer": "28",
+      "incorrectAnswers": [ "24", "48", "36" ],
+      "unit": "cm"
+    },
+    {
+      "difficulty": "8. Klasse",
+      "id": 15,
+      "category": "Sandsynlighed",
+      "question": "Kast en mønt to gange. Hvad er sandsynligheden for at få plat begge gange?",
+      "correctAnswer": "1/4",
+      "incorrectAnswers": [ "1/2", "1/3", "1" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "8. Klasse",
+      "id": 16,
+      "category": "Tal",
+      "question": "Hvad er 10\\% af 50?",
+      "correctAnswer": "5",
+      "incorrectAnswers": [ "1", "10", "500" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "8. Klasse",
+      "id": 17,
+      "category": "Regnestrategier",
+      "question": "2/3 * 9/4.",
+      "correctAnswer": "3/2",
+      "incorrectAnswers": [ "18/12", "6/12", "11/7" ],
+      "unit": ""
     },
     {
       "difficulty": "9. Klasse",
@@ -280,12 +955,222 @@
       "unit": ""
     },
     {
+      "difficulty": "9. Klasse",
+      "id": 6,
+      "category": "Regnestrategier",
+      "question": "Beregn renten på et lån på 10.000 kr. med en rente på 5% over et år.",
+      "correctAnswer": "500",
+      "incorrectAnswers": [ "10.500", "50", "1.000" ],
+      "unit": "Enheden: kr."
+    },
+    {
+      "difficulty": "9. Klasse",
+      "id": 7,
+      "category": "Algebra",
+      "question": "2(x + 3) = 10",
+      "correctAnswer": "x = 2",
+      "incorrectAnswers": [ "x = 5", "x = 8", "x = -1" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "9. Klasse",
+      "id": 8,
+      "category": "Algebra",
+      "question": "Hvordan vil formlen for arealet af en trekant (A = 1/2 * h * g) se ud, hvis vi isolere højden (h)?",
+      "correctAnswer": "h = 2*A/g",
+      "incorrectAnswers": [ "h = A/2*g", "h = 2*g/A", "h = A*g/2" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "9. Klasse",
+      "id": 9,
+      "category": "Geometri",
+      "question": "Hvad er pythagoras læresætning?",
+      "correctAnswer": "a^2 + b^2 = c^2",
+      "incorrectAnswers": [
+        "a + b = c",
+        "b^2 + c^2 = a^2",
+        "a^3 + b^3 = c^3"
+      ],
+      "unit": ""
+    },
+    {
+      "difficulty": "9. Klasse",
+      "id": 10,
+      "category": "Vektorer",
+      "question": "Hvad er forskellen på en drejning og en parallelforskydning?",
+      "correctAnswer": "Drejning ændrer retningen, parallelforskydning flytter objektet.",
+      "incorrectAnswers": [ "Drejning flytter objektet opad, parallelforskydning roterer det.", "Drejning flytter objektet, parallelforskydning ændrer størrelsen.", "Drejning ændrer formen, parallelforskydning ændrer retningen." ],
+      "unit": ""
+    },
+    {
+      "difficulty": "9. Klasse",
+      "id": 11,
+      "category": "Sandsynlighed",
+      "question": "Hvad er sandsynligheden for at trække et rødt kort fra et almindeligt sæt spillekort?",
+      "correctAnswer": "1/2",
+      "incorrectAnswers": [ "1/4", "1/52", "1/13" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "9. Klasse",
+      "id": 12,
+      "category": "Tal",
+      "question": "Hvad er tallet 0,00035 i videnskabelig notation.",
+      "correctAnswer": "3,5 * 10^-4",
+      "incorrectAnswers": [ "35 * 10⁻^-5", "0,35 * 10^-3", "3,5 * 10^4" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "9. Klasse",
+      "id": 13,
+      "category": "Regnestrategier",
+      "question": "Beregn (2/3)^-2",
+      "correctAnswer": "9/4",
+      "incorrectAnswers": [ "4/9", "-4/9", "2/9" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "9. Klasse",
+      "id": 14,
+      "category": "Algebra",
+      "question": "Løs uligheden: 3x - 5 > 4",
+      "correctAnswer": "x > 3",
+      "incorrectAnswers": [ "x < 3", "x ≥ 3", "x ≤ 3" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "9. Klasse",
+      "id": 15,
+      "category": "Vektorer",
+      "question": "Hvad er hældningen for den lineære funktion g(x) = -1/2x + 3?",
+      "correctAnswer": "-1/2",
+      "incorrectAnswers": [ "3", "1/2", "2" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "9. Klasse",
+      "id": 16,
+      "category": "Geometri",
+      "question": "Hvad er forholdet mellem sidelængderne i en ligesidet trekant?",
+      "correctAnswer": "Alle sidelængder er ens.",
+      "incorrectAnswers": [ "To sidelængder er ens.", "Ingen sidelængder er ens.", "Fire sider er ens" ],
+      "unit": ""
+    },
+    {
       "difficulty": "10. Klasse",
       "id": 1,
-      "category": "Ligninger og funktioner",
+      "category": "Algebra",
       "question": "x^2-5x+6=0",
       "correctAnswer": "x=2 || x=3",
       "incorrectAnswers": [ "x=1 || x=5", "x=20 || x=10", "x=12 || x=15" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "10. Klasse",
+      "id": 2,
+      "category": "Regnestrategier",
+      "question": "Beregn den sammensatte rente på en investering på 5.000 kr. med en årlig rente på 3% over 5 år.",
+      "correctAnswer": "5796",
+      "incorrectAnswers": [ "5700", "5790", "6000" ],
+      "unit": "kr."
+    },
+    {
+      "difficulty": "10. Klasse",
+      "id": 3,
+      "category": "Algebra",
+      "question": "Løs ligningssystemet: \n x + y = 5 \n 2x - y = 1",
+      "correctAnswer": "x = 2, y = 3",
+      "incorrectAnswers": [ "x = 5, y = 3", "x = 6, y = 1", "x = 3, y = 2" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "10. Klasse",
+      "id": 4,
+      "category": "Algebra",
+      "question": "Omskriv formlen for volumen af en kugle (V = 4/3πr^3) til at isolere radius (r).",
+      "correctAnswer": "r = 3^√(3V/4π)",
+      "incorrectAnswers": [ "r = 4^√(2V/6π)", "r = 5^√(4V/2π)", "r = 3^√(3V/4π)" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "10. Klasse",
+      "id": 5,
+      "category": "Vektorer",
+      "question": "Hvordan kan man beskrive en bevægelse i et koordinatsystem ved hjælp af vektorer?",
+      "correctAnswer": "Ved vektorens retning og længde.",
+      "incorrectAnswers": [
+        "Ved punktets farve og størrelse.",
+        "Ved koordinatsystemets form og farve.",
+        "Ved antallet af koordinatakser."
+      ],
+      "unit": ""
+    },
+    {
+      "difficulty": "10. Klasse",
+      "id": 6,
+      "category": "Måling",
+      "question": "Hvordan kan man bestemme højden af et objekt i omverdenen?",
+      "correctAnswer": "Ved brug af trigonometri.",
+      "incorrectAnswers": [
+        "Ved at gætte.",
+        "Ved at måle dets bredde.",
+        "Ved at spørge nogen."
+      ],
+      "unit": ""
+    },
+    {
+      "difficulty": "10. Klasse",
+      "id": 7,
+      "category": "Sandsynlighed",
+      "question": "Hvad er en 'betinget sandsynlighed'?",
+      "correctAnswer": "Sandsynlighed givet en anden hændelse.",
+      "incorrectAnswers": [
+        "Sandsynlighed uafhængig af andre hændelser.",
+        "Sandsynlighed for to uafhængige hændelser.",
+        "Sandsynlighed minus en anden hændelse."
+      ],
+      "unit": ""
+    },
+    {
+      "difficulty": "10. Klasse",
+      "id": 8,
+      "category": "Tal",
+      "question": "Hvad er forskellen på præcision og nøjagtighed?",
+      "correctAnswer": "Præcision: konsistens, Nøjagtighed: korrekthed.",
+      "incorrectAnswers": [
+        "Præcision: korrekthed, Nøjagtighed: konsistens.",
+        "Præcision og nøjagtighed er det samme.",
+        "Nøjagtighed er vigtigere end præcision."
+      ],
+      "unit": ""
+    },
+    {
+      "difficulty": "10. Klasse",
+      "id": 9,
+      "category": "Regnestrategier",
+      "question": "Beregn den effektive rente på et lån med en nominel rente på 4\\% og månedlig rentetilskrivning.",
+      "correctAnswer": 4,
+      "incorrectAnswers": [ "3", "7", "10" ],
+      "unit": "\\%"
+    },
+
+    {
+      "difficulty": "10. Klasse",
+      "id": 10,
+      "category": "Algebra",
+      "question": "Løs uligheden: |x - 2| < 5",
+      "correctAnswer": "-3 < x < 7",
+      "incorrectAnswers": [ "-5 < x < 10", "7 < x < -3", "-4 < x < -6" ],
+      "unit": ""
+    },
+    {
+      "difficulty": "10. Klasse",
+      "id": 11,
+      "category": "Algebra",
+      "question": "Hvilken formel bruges til at beregne trapezens areal ud fra trekantens areal?",
+      "correctAnswer": "(a + b) / 2 * h",
+      "incorrectAnswers": [ "a * h / 2", "a * b * h", "a^2 + b^2 = c^2" ],
       "unit": ""
     }
   ]
