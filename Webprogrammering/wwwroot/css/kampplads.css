@@ -89,12 +89,29 @@
     border: 1px;
     font-size: 10px;
 }
-.close-button {
+/*Styling to the information buttom*/
+.informationButtom {
+    position: absolute;
+    right: 30px;
+    bottom: 5px;
+    height: auto;
+    height: 50px;
+}
+.closeInformationButtom {
+    margin: 0px;
+    padding: 0px;
     position: absolute;
     right: 10px;
-    bottom: 10px;
-    width: 40px;
-    border-radius: 5px;
+    top: 5px;
+    height: auto;
+    font-size: 20px;
+    color: red;
+}
+
+/*Styling to the information modal box content*/
+.information {
+    display: none;
+    text-align: center;
 }
 
 /*Stylling for the countdown timer*/

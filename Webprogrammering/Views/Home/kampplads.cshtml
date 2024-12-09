@@ -7,8 +7,10 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Math-Attack</title>
+        <!--Refference to information icon-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=info" />
+        <!--Refference to kampplads.css-->
         <link href="~/css/kampplads.css" rel="stylesheet"/>
-    <script id="MathJax-script" defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     </head>
     <body>
         <!--Modal box for the user to choose a difficultcy and match with an opponent-->
@@ -26,6 +28,24 @@
                     <button class="difficulty-level-button col-3 btn-secondary">8. Klasse</button>
                     <button class="difficulty-level-button col-3 btn-secondary">9. Klasse</button>
                     <button class="difficulty-level-button col-3 btn-secondary">10. Klasse</button>
+
+                    <span class="material-symbols-outlined informationButtom btn">info</span>
+                </div>
+                <!--Information and rules about the game screen-->
+                <div class="information">
+                    <strong class="closeInformationButtom btn">X</strong>
+                    <h1>Regler og informationer</h1>
+
+                    <strong>Om spillet:</strong>
+                    <p style="margin-bottom: 0px">I dette spil dyster du mod en anden spiller online i en 1 mod 1 matematikduel. I får hver især de samme matematikspørgsmål, der spawner ned foran jer, og begge spillere har dermed muligheden for at svare på de præcis samme spørgsmål. Der er ingen tidsgrænse, men duellen fortsætter, indtil en spiller ikke har flere livskræfter. 🔢</p>
+                    <p style="margin-top: 0px"><strong>Bemærk: </strong>Begge spillere starter med 100 livskræfter.</p><br />
+
+                    <strong>Hvordan vinder man spillet:</strong>
+                    <p>Spillet vindes ved, at man som spiller får slået alt livskraften ud af den anden spiller. 🏆</p><br />
+
+                    <strong>Hvilke matematikspørgsmål kan man støde på:</strong>
+                    <p style="margin-bottom: 0px">Der er to typer af matematikspørgsmål i spillet: multiple choice og et svar input-felt (kun et tal). Inden for disse to typer kan man støde på mange forskellige matematikemner lige fra multiplikation og addition til geometri og algebra.</p>
+                    <p style="margin-top: 0px"><strong>Bemærk: </strong>Man kun skal skrive et enkelt tal i svar input-feltet - ingen bogstaver, ligninger eller mere end et tal.</p>
                 </div>
                 <!-- Searching for Opponent Screen -->
                 <div class="searchOpponent" style="display: none;">
@@ -102,5 +122,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.min.js"></script>
         <!-- Refference to the JavaScript file -->
         <script src="~/js/kampplads.js"></script>
+        <!-- Refference to MathJax LaTeX math syntax -->
+        <script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     </body>
 </html>
