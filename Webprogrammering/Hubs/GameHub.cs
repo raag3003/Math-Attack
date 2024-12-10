@@ -21,6 +21,7 @@ namespace Webprogrammering.Hubs
             { "8. Klasse", 5 },
             { "9. Klasse", 5 },
             { "10. Klasse", 1 }
+
         };
 
         public async Task JoinGame(string difficulty)

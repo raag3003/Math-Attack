@@ -206,11 +206,14 @@ function updateHealthBar(isPlayer, health) {
 
 // Modal box
 //-----------------------------------------------------------------------------------------------------
+// Function
 // Function to shows the Modal box and hide gameArena, when the user refresh the site
+ 
 window.onload = function () {
     document.getElementById("matchOpponent").style.display = "flex";
     document.querySelector('.gameArena').style.display = "none";
 };
+
 // Function to remove the Modal box and add gameArena, when the user is matched with an opponent
 function closeModal() {
     document.getElementById("matchOpponent").style.display = "none";
@@ -220,6 +223,7 @@ function closeModal() {
 function GameOver(isPlayer) {
     // All these 4 refference are all refferences to the html DOM-elements
     const modal = document.getElementById("matchOpponent"); // Refference to the matchOppoent screen
+    const start = modal.querySelector('.startScreen'); // Reference to the host, join, random screen
     const difficultyScreen = modal.querySelector('.difficultyScreen'); // Refference to the choose a specific difficulty screen
     const searchScreen = modal.querySelector('.searchOpponent'); // Refference to the waiting for oppoent screen 
     const gameOverScreen = modal.querySelector('.gameOverScreen'); // Refference to the game over scrren with stats and navigation buttoms
@@ -227,6 +231,7 @@ function GameOver(isPlayer) {
     gameIsOver = true;
 
     // Hide all div except "gameOverScreen"
+    startScreen.style.display = 'none';
     difficultyScreen.style.display = 'none';
     searchScreen.style.display = 'none';
     gameOverScreen.style.display = 'block';
@@ -265,6 +270,31 @@ let connection = new signalR.HubConnectionBuilder()
 
 // Opens the connection for Real-Time communication with sigmalR
 connection.start().catch(err => console.error(err));
+
+// This EventListener checks which option was chosen on the start screen
+/*document.querySelectorAll('.start-button').forEach(button => {
+    button.addEventListener('click', function () {
+        const gameMode = this.textContent;
+        selectedGameMode = this.textContent;
+        document.querySelector('.startScreen').style.display = 'none';
+
+        if (selectedGameMode === 'Random Match')
+        {
+            document.querySelector('.difficultyScreen').style.display = 'block';
+        }
+
+        
+    });
+});*/
+
+document.getElementById("random").addEventListener("click", randomMatch);
+
+function randomMatch() {
+    document.querySelector('.startScreen').style.display = 'none';
+    document.querySelector('.difficultyScreen').style.display = 'block';
+}
+
+
 
 // This EventListener checks what difficulty (4. klasse til 10. klasse) the user have choosen
 document.querySelectorAll('.difficulty-level-button').forEach(button => {

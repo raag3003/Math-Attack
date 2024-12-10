@@ -11,13 +11,23 @@
     <script id="MathJax-script" defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     </head>
     <body>
+
         <!--Modal box for the user to choose a difficultcy and match with an opponent-->
         <div class="modal" id="matchOpponent">
             <div class="modal-content">
+                <!-- Gamemode Selector-->
+                <div class="startModel">
+                <h1>Velkommen til Math-Attack spillet</h1>
+                <p>Vælg host eller join for at spille med en kammerat, eller tilfældig spiller</p>
+
+                <button class="start-button" id="host">Host Game</button>
+                <button class="start-button" id="join">Join Game</button>
+                <button class="start-button" id="random">Random Match</button>
+                </div>
                 <!-- Difficulty Selection Screen -->
-                <div class="difficultyScreen">
+                <div class="difficultyScreen" style="display: none;">
                     <h1>Velkommen til Math-Attack spillet</h1>
-                    <p>Vælg en svarhedgrad, også finder vi en modsatnder til dig!🎮</p>
+                    <p>Vælg en sværhedgrad, også finder vi en modsatnder til dig!🎮</p>
 
                     <button class="difficulty-level-button col-3 btn-secondary">4. Klasse</button>
                     <button class="difficulty-level-button col-3 btn-secondary">5. Klasse</button>
