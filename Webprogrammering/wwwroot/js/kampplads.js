@@ -223,7 +223,7 @@ function closeModal() {
 function GameOver(isPlayer) {
     // All these 4 refference are all refferences to the html DOM-elements
     const modal = document.getElementById("matchOpponent"); // Refference to the matchOppoent screen
-    const start = modal.querySelector('.startScreen'); // Reference to the host, join, random screen
+    const start = modal.querySelector('.startModel'); // Reference to the host, join, random screen
     const difficultyScreen = modal.querySelector('.difficultyScreen'); // Refference to the choose a specific difficulty screen
     const searchScreen = modal.querySelector('.searchOpponent'); // Refference to the waiting for oppoent screen 
     const gameOverScreen = modal.querySelector('.gameOverScreen'); // Refference to the game over scrren with stats and navigation buttoms
@@ -290,7 +290,7 @@ connection.start().catch(err => console.error(err));
 document.getElementById("random").addEventListener("click", randomMatch);
 
 function randomMatch() {
-    document.querySelector('.startScreen').style.display = 'none';
+    document.querySelector('.startModel').style.display = 'none';
     document.querySelector('.difficultyScreen').style.display = 'block';
 }
 
