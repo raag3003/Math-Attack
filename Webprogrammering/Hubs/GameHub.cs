@@ -14,13 +14,13 @@ namespace Webprogrammering.Hubs
         private static Dictionary<string, int> QuestionsPerDifficulty = new()
         {
             // Remember to update the number of quetions whenever quetions to the JSON-file gets updated or deleted
-            { "4. Klasse", 6 },
-            { "5. Klasse", 5 },
-            { "6. Klasse", 4 },
-            { "7. Klasse", 6 },
-            { "8. Klasse", 5 },
-            { "9. Klasse", 5 },
-            { "10. Klasse", 1 }
+            { "4. Klasse", 21 },
+            { "5. Klasse", 20 },
+            { "6. Klasse", 18 },
+            { "7. Klasse", 21 },
+            { "8. Klasse", 17 },
+            { "9. Klasse", 16 },
+            { "10. Klasse", 11 }
 
         };
 
