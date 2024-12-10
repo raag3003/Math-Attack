@@ -224,6 +224,7 @@ function GameOver(isPlayer) {
     // All these 4 refference are all refferences to the html DOM-elements
     const modal = document.getElementById("matchOpponent"); // Refference to the matchOppoent screen
     const startModel = modal.querySelector('.startModel'); // Reference to the host, join, random screen
+    const hostScreen = modal.querySelector('.hostModel'); // Reference to the host screen
     const difficultyScreen = modal.querySelector('.difficultyScreen'); // Refference to the choose a specific difficulty screen
     const searchScreen = modal.querySelector('.searchOpponent'); // Refference to the waiting for oppoent screen 
     const gameOverScreen = modal.querySelector('.gameOverScreen'); // Refference to the game over scrren with stats and navigation buttoms
@@ -232,6 +233,7 @@ function GameOver(isPlayer) {
 
     // Hide all div except "gameOverScreen"
     startModel.style.display = 'none';
+    hostScreen.style.display = 'none';
     difficultyScreen.style.display = 'none';
     searchScreen.style.display = 'none';
     gameOverScreen.style.display = 'block';
@@ -271,9 +273,6 @@ let connection = new signalR.HubConnectionBuilder()
 // Opens the connection for Real-Time communication with sigmalR
 connection.start().catch(err => console.error(err));
 
-
-
-// EventListener for the "Random" button
 
 
 

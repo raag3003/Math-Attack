@@ -11,6 +11,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=info" />
         <!--Refference to kampplads.css-->
         <link href="~/css/kampplads.css" rel="stylesheet"/>
+
     </head>
     <body>
 
@@ -22,15 +23,36 @@
                     <h1>Velkommen til Math-Attack spillet</h1>
                     <p>Vælg host eller join for at spille med en kammerat, eller tilfældig spiller</p>
 
-                    <button class="start-button" id="host" >Host Game</button>
-                    <button class="start-button" id="join">Join Game</button>
+                    <button type="button" id="host" onclick="hostButton()" >Host Game</button>
+                    <button type="button" id="join">Join Game</button>
                     <button type="button" id="random" onclick="randomButton()">Random Match</button>
 
+                </div>
+                <!-- Host Screen-->
+                <div class="hostScreen" style="display: none;">
+                    <h1>Velkommen til Math-Attack spillet</h1>
+                    <p>Vælg en sværhedsgrad</p>
+
+                    <button class="host-difficulty-level-button col-3 btn-secondary">4. Klasse</button>
+                    <button class="host-difficulty-level-button col-3 btn-secondary">5. Klasse</button>
+                    <button class="host-difficulty-level-button col-3 btn-secondary">6. Klasse</button>
+                    <button class="host-difficulty-level-button col-3 btn-secondary">7. Klasse</button>
+                    <button class="host-difficulty-level-button col-3 btn-secondary">8. Klasse</button>
+                    <button class="host-difficulty-level-button col-3 btn-secondary">9. Klasse</button>
+                    <button class="host-difficulty-level-button col-3 btn-secondary">10. Klasse</button>
+
+                <span class="material-symbols-outlined informationButtom btn">info</span>
+                </div>
+
+                <!-- Host wait Screen-->
+                <div class="hostWait" style="display: none;">
+                    <h1>Venter på spiller</h1>
+                    <p>Pin:</p> <p id="pin"></p>
                 </div>
                 <!-- Difficulty Selection Screen -->
                 <div class="difficultyScreen" style="display: none;">
                     <h1>Velkommen til Math-Attack spillet</h1>
-                    <p>Vælg en sværhedgrad, også finder vi en modsatnder til dig!🎮</p>
+                    <p>Vælg en sværhedsgrad, også finder vi en modsatnder til dig!🎮</p>
 
                     <button class="difficulty-level-button col-3 btn-secondary">4. Klasse</button>
                     <button class="difficulty-level-button col-3 btn-secondary">5. Klasse</button>
@@ -147,6 +169,42 @@
 
             console.log("Button clicked");
         }
+        </script>
+
+        <!-- Host button function -->
+        <script>
+        function hostButton() {
+
+           // Hide the start screen
+           document.querySelector('.startModel').style.display = 'none';
+
+           // Show the difficulty selector screen
+           document.querySelector('.hostScreen').style.display = 'block';
+            }
+
+        </script>
+
+        <script>
+        function randomPin() {
+            // Random ping
+
+            document.getElementById('id').innerHTML = rando(0, 999999);
+        }
+        </script>
+
+        <script>
+        // This EventListener checks what difficulty (4. klasse til 10. klasse) the host picked
+        document.querySelectorAll('.host-difficulty-level-button').forEach(button => {
+
+            button.addEventListener('click', function () {
+                const difficulty = this.textContent;
+                selectedDifficulty = this.textContent;
+                document.querySelector('.hostScreen').style.display = 'none';
+                document.querySelector('.hostWait').style.display = 'block';
+
+
+            });
+        })
         </script>
 
     </body>
