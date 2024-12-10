@@ -19,12 +19,13 @@
             <div class="modal-content">
                 <!-- Gamemode Selector-->
                 <div class="startModel">
-                <h1>Velkommen til Math-Attack spillet</h1>
-                <p>Vælg host eller join for at spille med en kammerat, eller tilfældig spiller</p>
+                    <h1>Velkommen til Math-Attack spillet</h1>
+                    <p>Vælg host eller join for at spille med en kammerat, eller tilfældig spiller</p>
 
-                <button class="start-button" id="host">Host Game</button>
-                <button class="start-button" id="join">Join Game</button>
-                <button class="start-button" id="random">Random Match</button>
+                    <button class="start-button" id="host" >Host Game</button>
+                    <button class="start-button" id="join">Join Game</button>
+                    <button type="button" id="random" onclick="randomButton()">Random Match</button>
+
                 </div>
                 <!-- Difficulty Selection Screen -->
                 <div class="difficultyScreen" style="display: none;">
@@ -134,5 +135,19 @@
         <script src="~/js/kampplads.js"></script>
         <!-- Refference to MathJax LaTeX math syntax -->
         <script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        
+        <!-- Random match button fucntion, virker ikke i javascript, ved ikke hvorfor-->
+        <script>
+        function randomButton() {
+            // Hide the start screen
+            document.querySelector('.startModel').style.display = 'none';
+
+            // Show the difficulty selector screen
+            document.querySelector('.difficultyScreen').style.display = 'block';
+
+            console.log("Button clicked");
+        }
+        </script>
+
     </body>
 </html>
