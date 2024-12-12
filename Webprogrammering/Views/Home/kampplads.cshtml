@@ -23,8 +23,8 @@
                     <h1>Velkommen til Math-Attack spillet</h1>
                     <p>Vælg host eller join for at spille med en kammerat, eller tilfældig spiller</p>
 
-                    <button type="button" id="host" onclick="hostButton()">Host Game</button>
-                    <button type="button" id="join" onclick="joinButton()">Join Game</button>
+                    <button type="button" id="host" onclick="hostButton()" >Host Game</button>
+                    <button type="button" id="join">Join Game</button>
                     <button type="button" id="random" onclick="randomButton()">Random Match</button>
 
                 </div>
@@ -47,17 +47,8 @@
                 <!-- Host wait Screen-->
                 <div class="hostWait" style="display: none;">
                     <h1>Venter på spiller</h1>
-                    <p>Pin:</p> 
-                    <label id="pin"></label>
+                    <p>Pin:</p> <p id="pin"></p>
                 </div>
-
-                <!-- Join screen -->
-                <div class="joinScreen" style="display: none;">
-                    <h1>Indtast pin kode</h1>
-                    <input id="pinNumber" type="number" size="6"/>
-                    <button type="button" onclick="returnPin()" >Join</button>
-                </div>
-
                 <!-- Difficulty Selection Screen -->
                 <div class="difficultyScreen" style="display: none;">
                     <h1>Velkommen til Math-Attack spillet</h1>
@@ -193,41 +184,23 @@
 
         </script>
 
-        <!-- Join button function -->
         <script>
-        function joinButton() {
+        function randomPin() {
+            // Random ping
 
-            // Hide the start screen
-            document.querySelector('.startModel').style.display = 'none';
-
-            // Show the difficulty selector screen
-            document.querySelector('.joinScreen').style.display = 'block';
-
-
-            connection.invoke("JoinGame", pin);
-
+            document.getElementById('id').innerHTML = rando(0, 999999);
         }
-
         </script>
 
-
         <script>
-
         // This EventListener checks what difficulty (4. klasse til 10. klasse) the host picked
         document.querySelectorAll('.host-difficulty-level-button').forEach(button => {
 
             button.addEventListener('click', function () {
-
-
                 const difficulty = this.textContent;
                 selectedDifficulty = this.textContent;
                 document.querySelector('.hostScreen').style.display = 'none';
                 document.querySelector('.hostWait').style.display = 'block';
-
-                const pin = Math.floor(Math.random() * 999999 + 100000);
-                document.getElementById('pin').innerHTML = pin;
-
-                console.log(pin);
 
 
             });
