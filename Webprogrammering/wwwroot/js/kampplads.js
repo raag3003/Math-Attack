@@ -225,7 +225,7 @@ function GameOver(isPlayer) {
     const modal = document.getElementById("matchOpponent"); // Refference to the matchOppoent screen
     const startModel = modal.querySelector('.startModel'); // Reference to the host, join, random screen
     const hostScreen = modal.querySelector('.hostScreen'); // Reference to the host screen
-    onst hostScreen = modal.querySelector('.hostWait'); // Reference to the host screen
+    const hostWait = modal.querySelector('.hostWait'); // Reference to the host screen
     const joinScreen = modal.querySelector('.joinScreen'); 
     const difficultyScreen = modal.querySelector('.difficultyScreen'); // Refference to the choose a specific difficulty screen
     const searchScreen = modal.querySelector('.searchOpponent'); // Refference to the waiting for oppoent screen 
