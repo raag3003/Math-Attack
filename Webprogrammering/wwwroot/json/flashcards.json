@@ -1,0 +1,29 @@
+{
+  "cards": [
+    {
+      "id": 1,
+      "front": "Formlen for arealet af en cirkel",
+      "back": "\\(A = \\pi \\cdot r^2 \\)"
+    },
+    {
+      "id": 2,
+      "front": "Den lange side på en trekant",
+      "back": "\\(Hypotenusen \\)"
+    },
+    {
+      "id": 3,
+      "front": "Hvad er pi \\((\\pi)? \\)",
+      "back": "\\(3.14159... \\)"
+    },
+    {
+      "id": 4,
+      "front": "Hvad er kvadratroden af 144 \\((\\sqrt{144})? \\)",
+      "back": "\\(12 \\)"
+    },
+    {
+      "id": 5,
+      "front": "Hvad er en median i statistik?",
+      "back": "Den midterste værdi i et sorteret datasæt"
+    }
+  ]
+}

@@ -34,16 +34,69 @@ document.querySelectorAll(".close").forEach(function (closeButton) {
 
 // Flashcard clik function
 //----------------------------------------------------------------------------------
-document.querySelectorAll('.flashcard-body').forEach(function (flashcardBody) {
-    flashcardBody.addEventListener('click', function () {
-        // Shift in between adding and removing the "rotated"-class
-        flashcardBody.classList.toggle('rotated');
+let cards = [];
+let currentCard = 0;
+let isShowingQuestion = true;
+
+// Load the cards from JSON
+fetch('/json/flashcards.json')
+    .then(response => response.json())
+    .then(data => {
+        cards = data.cards;
+        showCard();
     });
+
+const flashcard = document.getElementById('flashcard');
+const prevButton = document.getElementById('prev');
+const nextButton = document.getElementById('next');
+
+// Show current card
+function showCard() {
+    if (cards.length === 0) return;
+
+    if (isShowingQuestion == true) {
+        flashcard.innerHTML = `<p>${cards[currentCard].front}</p>`;
+        isShowingQuestion = true;
+    } else {
+        flashcard.innerHTML = `<p style="transform: rotateY(180deg)">${cards[currentCard].back}</p>`; // Adding inline css inside the inline html to rotate the back side of the flashcard.
+        isShowingQuestion = false;
+    }
+
+    if (isShowingQuestion == true) {
+        document.querySelector(".hint").style.display = "block";
+    } else {
+        document.querySelector(".hint").style.display = "none";
+    }
+
+    MathJax.typeset(); // Format the math numbers, equations, symbols etc.
+}
+
+// Flip card
+flashcard.addEventListener('click', () => {
+    flashcard.classList.toggle('flipped');
+    isShowingQuestion = !isShowingQuestion;
+    showCard();
 });
 
+// Previous card
+prevButton.addEventListener('click', () => {
+    if (currentCard > 0) {
+        currentCard--;
+        isShowingQuestion = true;
+        flashcard.classList.remove('flipped');
+        showCard();
+    }
+});
 
-
-
+// Next card
+nextButton.addEventListener('click', () => {
+    if (currentCard < cards.length - 1) {
+        currentCard++;
+        isShowingQuestion = true;
+        flashcard.classList.remove('flipped');
+        showCard();
+    }
+});
 
 
 // Logic for the test

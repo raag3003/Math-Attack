@@ -11,6 +11,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+        <link href="https://fonts.googleapis.com/css2?family=Bentham&family=Fredericka+the+Great&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     </head>
 
     <body class="denSorteSkole-Background">
@@ -26,16 +28,12 @@
 
             <!--The code for all the math formulas-->
             <!-------------------------------------------------------------------------------------------------------------------------------->
-            <div class="Formelsamling row">
+            <div style="font-family: Bentham, serif; font-style: italic; font-size: 14pt; font-weight: bold" class="Formelsamling row">
                 <h3 style="text-align: center; display: inline; margin-right: 14%; margin-left: 30%" class="col-10">Formelsamling</h3>
                 <button style="border-radius: 20px; display: inline" class="col-2 btn-danger close">Luk</button>
                 <br /><br /><hr />
                 <details>
-                   <summary style="text-align: left;">
-                       Volume
-                       <hr />
-                   </summary>
-
+                    <summary>Volumen</summary>
                     <table class="table table-striped">
                         <thead>
                             <tr>
@@ -48,7 +46,7 @@
                             <tr>
                                 <td>Firkant</td>
                                 <td>\( V = s^3 \)</td>
-                                <td>\(s = En side på firkanten\)</td>
+                                <td>s = En side på firkanten</td>
                             </tr>
                             <tr>
                                 <td>Kugle</td>
@@ -72,12 +70,77 @@
                             </tr>
                             <tr>
                                 <td>Parallelepipedum</td>
-                                <td>\( V = l \cdot b  \cdot h \)</td>
+                                <td>\( V = l \cdot b \cdot h \)</td>
                                 <td>\(l = Længden\)<br />\(b = Bredden\)<br />\(h = Højden\)</td>
                             </tr>
                         </tbody>
                     </table>
                 </details>
+                <hr />
+                <details>
+                    <summary>Areal</summary>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Formler</th>
+                                <th>Forklaring</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Firkant</td>
+                                <td>\(A = l^2\)</td>
+                                <td>l = Længden af en side</td>
+                            </tr>
+                            <tr>
+                                <td>Rektangel</td>
+                                <td>\(A = b \cdot h\)</td>
+                                <td>\(b = Bredden\)<br />\(h = Højden\)</td>
+                            </tr>
+                            <tr>
+                                <td>Trekant</td>
+                                <td>\(A = \frac{g  \cdot  h}{2}\)</td>
+                                <td>\(g = Grundfladen\)<br />\(h = Højden\)</td>
+                            </tr>
+                            <tr>
+                                <td>Rhombus</td>
+                                <td>\(A = \frac{D  \cdot  d}{2}\)</td>
+                                <td>D = Stor  diagonal<br />d = Lille  diagonal</td>
+                            </tr>
+                            <tr>
+                                <td>Trapez</td>
+                                <td>\(A = \frac{B  +  b}{2} \cdot h\)</td>
+                                <td>
+                                    B = Lange side<br />b = Korte side<br />\(h = Højden\)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Regulær polygon</td>
+                                <td>\(A = \frac{O}{2} \cdot a\)</td>
+                                <td>
+                                    \(O = Omkredsen\)<br /><a href="https://en.wikipedia.org/wiki/Apothem" target="_blank">a = apotemaet</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Cirkel</td>
+                                <td>\(A = \pi \cdot r^2\)<br />\(O = 2 \cdot \pi \cdot r\)</td>
+                                <td>\(r = Radius\)<br />\(O = Omkredsen\)</td>
+                            </tr>
+                            <tr>
+                                <td>Kegle (overflade)</td>
+                                <td>\(A = \pi \cdot r \cdot s\)</td>
+                                <td>\(r = Radius\)<br />s = Skrå højde</td>
+                            </tr>
+                            <tr>
+                                <td>Kugle (areal)</td>
+                                <td>\(A = 4 \cdot \pi \cdot r^2\)</td>
+                                <td>\(r = Radius\)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </details>
+                <hr />
             </div>
 
             <!--The code for the testing box-->
@@ -118,25 +181,24 @@
             <!--The code for the flashcard box-->
             <!---------------------------------------------------------------------------------------------------------->
             <div class="flashcard">
-                <div class="flashcard-exit">
-                    <button class="btn-danger close">Luk</button>
+                <div class="card" id="flashcard">
                 </div>
-                <div class="flashcard-body">
-                    <div class="flashcard-front">
-                        <p>Den lange side på en trekant</p>
-                    </div>
-                    <div class="flashcard-back">
-                        <p>Hypotenusen</p>
-                    </div>
+                <div class="hint">
+                    <strong>🖱️ Klik for at se svaret</strong>
+                </div>
+                <div class="controls">
+                    <button class="btn-danger close"><strong>Luk</strong></button>
+                    <button class="btn-warning" id="prev"><strong>Tilbage</strong></button>
+                    <button class="btn-success" id="next"><strong>Næste</strong></button>
                 </div>
             </div>
         </div>
         
         <br /><br /><br /><br /><br /><br />
 
-        <!--Refference to the JavaScript file "densorteskole.js"-->
-        <script src="~/js/densorteskole.js"></script>
         <!--Inported MathJax to make the math equations look pretty. Keep in mind that the math equations now is written in LaTex format-->
         <script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <!--Refference to the JavaScript file "densorteskole.js"-->
+        <script src="~/js/densorteskole.js"></script>
     </body>
 </html>
