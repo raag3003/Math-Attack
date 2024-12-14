@@ -82,7 +82,7 @@
 }
 
 /*Stylling to the buttons inside the Modal box, which choose the dificulcy of the questions*/
-.difficulty-level-button {
+.difficulty-level-button, host-difficulty-level-button {
     margin: 5px;
     width: auto;
     height: 58px;
