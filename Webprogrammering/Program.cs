@@ -87,6 +87,12 @@ namespace Webprogrammering
 
             // Start the application
             app.Run();
+            
+            // More detailed errors
+            builder.Services.AddSignalR(options =>
+            {
+                options.EnableDetailedErrors = true;
+            });
         }
     }
 }

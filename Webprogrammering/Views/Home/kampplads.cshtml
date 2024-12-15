@@ -203,11 +203,24 @@
             // Show the difficulty selector screen
             document.querySelector('.joinScreen').style.display = 'block';
 
-
-            connection.invoke("JoinGame", pin);
-
         }
 
+        </script>
+
+        <script>
+        function returnPin() {
+            const pin = document.getElementById('pinNumber').value;
+
+            if (!pin || pin.length !== 6) {
+                alert("Please enter a valid 6-digit PIN.");
+                return;
+            }
+
+            connection.invoke("JoinGameByPin", pin)
+                .catch(err => console.error(err.toString()));
+
+            console.log(pin);
+        }
         </script>
 
 
@@ -224,14 +237,15 @@
                 document.querySelector('.hostScreen').style.display = 'none';
                 document.querySelector('.hostWait').style.display = 'block';
 
-                const pin = Math.floor(Math.random() * 999999 + 100000);
+                let pin = Math.floor(Math.random() * 999999 + 100000);
                 document.getElementById('pin').innerHTML = pin;
 
-                console.log(pin);
 
-
+                connection.invoke("HostGame", difficulty, pin)
+                console.log("Invoking HostGame with Difficulty:", difficulty, "PIN:", pin);
             });
         })
+
         </script>
 
     </body>
