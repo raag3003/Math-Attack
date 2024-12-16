@@ -294,13 +294,13 @@ document.querySelectorAll('.difficulty-level-button').forEach(button => {
 });
 // This EventListener checks if informationButtom have been pressed for then disable the difficulty screen and enable the information screen
 document.querySelector('.informationButtom').addEventListener('click', function () {
-        document.querySelector('.difficultyScreen').style.display = 'none';
+        document.querySelector('.startScreen').style.display = 'none';
         document.querySelector('.information').style.display = 'block';
         console.log('The information buttom has been pressed');
 });
 // This EventListener checks if closeInformationButtom have been pressed for then disable the information screen and enable the difficulty screen
 document.querySelector('.closeInformationButtom').addEventListener('click', function () {
-    document.querySelector('.difficultyScreen').style.display = 'block';
+    document.querySelector('.startScreen').style.display = 'block';
     document.querySelector('.information').style.display = 'none';
 });
 
