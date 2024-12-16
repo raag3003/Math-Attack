@@ -4,11 +4,12 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
+
     <link href="~/css/village.css" rel="stylesheet" />
+
 </head>
 
-<div class="start-background">
+<!-- <div class="start-background">
     <div class="start-menu">
         <h1>Math Attack</h1>
         <br /><br /><br /><br />
@@ -16,26 +17,33 @@
         <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
         <button type="button" action="" class="start-button">Start</button>
     </div>
-</div>
+</div> -->
+
         
 <div class="village-background">
     <div class="village-menu">
         <h2>Velkommen til byen Numbertopia</h2>
         <h4>Tryk på et hus for at komme i gang</h4>
 
-        <button type="button" onclick="window.location.href='@Url.Action("kampplads", "Home")';" class="button-kampplads">Kamp-<br />plads</button><br />
-        <button type="button" onclick="window.location.href='@Url.Action("denSorteSkole", "Home")';" class="button-denSorteSkole">Den sorte skole</button><br />
-        <button type="button" onclick="window.location.href='pageUrl';" class="button-indstillinger">Indstillinger</button><br />
-        <button type="button" onclick="window.location.href='@Url.Action("Index", "Home")';" class="button-hjem">Hjem</button><br />
+        <a onclick="window.location.href='@Url.Action("kampplads", "Home")';" class="btn"><img class="button-kampplads button" src="~/images/KampPladsBtn.png" /></a>
+        
+        <a onlick="window.location.href='@Url.Action("denSorteSkole", "Home")';" class="btn"><img class="button-denSorteSkole button" src="~/images/sorteskolebtn.png" /></a>
+
+        <!-- <button type="button" onclick="window.location.href='pageUrl';" class="button-indstillinger">Indstillinger</button><br /> -->
+        <!-- <a onclick="window.location.href='@Url.Action("Index", "Home")';" class="btn"><img class="button-hjem button" src="~/images/hjembtn.png" /></a> -->
+        
     </div>
 </div>
 
 <!-- GSAP and ScrollToPlugin thats trigger when the user press the start button-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<!-- 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
 <script>
     // Scroll to the village screen when the Start button is clicked
     document.querySelector(".start-button").addEventListener("click", function () {
         gsap.to(window, { duration: 1, scrollTo: ".village-background" });
     });
-</script>
+</script> 
+-->
+

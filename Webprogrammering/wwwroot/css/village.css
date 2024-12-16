@@ -28,7 +28,7 @@ html, body {
 }
 
 .village-background {
-    background-image: url('../images/villagedrawing.jpg');
+    background-image: url('../images/villageFIXED.png');
     background-repeat: no-repeat;
     margin-bottom: 0px;
     background-position: top;
@@ -50,8 +50,8 @@ html, body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-button {
-    position: relative;
+.button {
+    position: absolute;
     border-radius: 100%;
     border: 2px;
     color: white;
@@ -74,38 +74,40 @@ button {
 
 .button-kampplads {
     height: 11vh;
-    background-color: red;
+    width: 200px;
 }
 
 .button-denSorteSkole {
-    height: 22vh;
-    background-color: black;
+    height: 11vh;
+    width: 100px;
 }
 
 .button-indstillinger {
     height: 17vh;
-    background-color: gray;
+    width: 100px;
+    
 }
 
 .button-hjem {
     height: 14vh;
-    background-color: aqua;
+    width: 100px;
+    
 }
 
 
 
 /* Media queries to adjust buttons on different screen sizes */
 /*--------------------------------------------------------------------------------------------------*/
-@media (max-width: 576px) { /* xs */
+@media (max-width: 576px) { /* xs done */
     .button-kampplads {
-        top: 43vh;
-        left: -10vw;
+        top: 30vh;
+        left: 5vw;
         height: 9vh;
     }
 
     .button-denSorteSkole {
-        top: 45vh;
-        left: -25vw;
+        top: 57vh;
+        left: 59vw;
         height: 20vh;
     }
 
@@ -116,22 +118,23 @@ button {
     }
 
     .button-hjem {
-        top: 20vh;
+        top: 80vh;
         left: 35vw;
         height: 8vh;
     }
 }
 
-@media (min-width: 576px) and (max-width: 660px) { /* sm */
+
+@media (min-width: 576px) and (max-width: 660px) { /* sm done */ 
     .button-kampplads {
-        top: 45vh;
-        left: -10vw;
+        top: 30vh;
+        left: 10vw;
         height: 9vh;
     }
 
     .button-denSorteSkole {
-        top: 46vh;
-        left: -27vw;
+        top: 57vh;
+        left: 65vw;
         height: 20vh;
     }
 
@@ -149,16 +152,16 @@ button {
 }
 
 /*An ekstra screen size*/
-@media (min-width: 660px) and (max-width: 768px) {
+@media (min-width: 660px) and (max-width: 768px) { /* Mellem sm og md done*/
     .button-kampplads {
-        top: 43vh;
-        left: -10vw;
+        top: 30vh;
+        left: 15vw;
         height: 9vh;
     }
 
     .button-denSorteSkole {
-        top: 44vh;
-        left: -27vw;
+        top: 57vh;
+        left: 68vw;
         height: 20vh;
     }
 
@@ -175,16 +178,16 @@ button {
     }
 }
 
-@media (min-width: 768px) and (max-width: 910px) { /* md */
+@media (min-width: 768px) and (max-width: 910px) { /* md done */
     .button-kampplads {
-        top: 42vh;
-        left: -10vw;
+        top: 30vh;
+        left: 15vw;
         height: 10vh;
     }
 
     .button-denSorteSkole {
-        top: 42vh;
-        left: -27vw;
+        top: 57vh;
+        left: 69vw;
         height: 21vh;
     }
 
@@ -202,16 +205,16 @@ button {
 }
 
 /*An extra screen size*/
-@media (min-width: 910px) and (max-width: 992px) {
+@media (min-width: 910px) and (max-width: 992px) { /*Mellem md og lg done*/
     .button-kampplads {
-        top: 40vh;
-        left: -10vw;
+        top: 30vh;
+        left: 20vw;
         height: 10vh;
     }
 
     .button-denSorteSkole {
-        top: 40vh;
-        left: -30vw;
+        top: 56vh;
+        left: 72vw;
         height: 21vh;
     }
 
@@ -228,16 +231,16 @@ button {
     }
 }
 
-@media (min-width: 992px) and (max-width: 1200px) { /* lg */
+@media (min-width: 992px) and (max-width: 1200px) { /* lg done*/
     .button-kampplads {
-        top: 38vh;
-        left: -10vw;
+        top: 30vh;
+        left: 22vw;
         height: 10vh;
     }
 
     .button-denSorteSkole {
-        top: 38vh;
-        left: -30vw;
+        top: 56vh;
+        left: 73vw;
         height: 21vh;
     }
 
@@ -254,16 +257,16 @@ button {
     }
 }
 
-@media (min-width: 1200px) { /* xl */
+@media (min-width: 1200px) { /* xl done */
     .button-kampplads {
-        top: 38vh;
-        left: -10vw;
+        top: 30vh;
+        left: 27vw;
         height: 10vh;
     }
 
     .button-denSorteSkole {
-        top: 38vh;
-        left: -30vw;
+        top: 56vh;
+        left: 77vw;
         height: 21vh;
     }
 
