@@ -10,7 +10,7 @@ namespace Webprogrammering.Hubs
         private static Dictionary<string, List<string>> waitingPlayers = new(); // A list over all users and there corresponding choosen difficulty, wating for an opponenent
         private static Dictionary<string, string> playerDifficulties = new(); // A list over all users and there corresponding choosen difficulty
         // An object with two strings (two users), that make sure these two users doesn't interrupt with the other users watting for a opponent.
-        private static readonly Dictionary<string, string> pinGames = new();
+        private static Dictionary<string, string> pinGames = new();
         private static Dictionary<string, string> playerMatches = new();
         private static Dictionary<string, bool> rematchRequests = new(); // A list over which two users that is eligible to play a rematch against each other, and if they have said yes
         private static Dictionary<string, int> QuestionsPerDifficulty = new()

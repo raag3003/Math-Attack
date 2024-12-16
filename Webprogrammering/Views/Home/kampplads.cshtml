@@ -226,6 +226,7 @@
 
         <script>
 
+
         // This EventListener checks what difficulty (4. klasse til 10. klasse) the host picked
         document.querySelectorAll('.host-difficulty-level-button').forEach(button => {
 
@@ -237,7 +238,8 @@
                 document.querySelector('.hostScreen').style.display = 'none';
                 document.querySelector('.hostWait').style.display = 'block';
 
-                let pin = Math.floor(Math.random() * 999999 + 100000);
+                let pinNumb = Math.floor(Math.random() * 899999 + 100000);
+                let pin = pinNumb.toString();
                 document.getElementById('pin').innerHTML = pin;
 
 
