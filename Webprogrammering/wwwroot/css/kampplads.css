@@ -1,6 +1,8 @@
 ﻿body {
     margin: 0px;
-    background-image: url('../images/villagefixed.png');
+    background-image: url('../images/kampplads arena duel pic.jpeg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 .gameArena {
