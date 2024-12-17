@@ -105,7 +105,7 @@
       "category": "Tal",
       "question": "Hvordan staves tallet 473 med ord.",
       "correctAnswer": "Fire hundrede og treoghalvfjerds",
-      "incorrectAnswers": [ "Fire hundrede og syvoghalvfjerds", "Tre hundrede og treoghalvfjerds", "Fire hundrede og treogtyve" ],
+      "incorrectAnswers": [ "Fire hundrede og syvoghalvfjerds", "Tre hundrede og treoghalvfjerds" ],
       "unit": ""
     },
     {
@@ -168,7 +168,7 @@
       "category": "Geometri",
       "question": "Hvilken figur har flest sider: en trekant eller en sekskant?",
       "correctAnswer": "Sekskant",
-      "incorrectAnswers": [ "Trekant", "Firkant", "Cirkel" ],
+      "incorrectAnswers": [ "Trekant", "Firkant" ],
       "unit": ""
     },
     {
