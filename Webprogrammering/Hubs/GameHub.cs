@@ -10,6 +10,7 @@ namespace Webprogrammering.Hubs
         private static Dictionary<string, List<string>> waitingPlayers = new(); // A list over all users and there corresponding choosen difficulty, wating for an opponenent
         private static Dictionary<string, string> playerDifficulties = new(); // A list over all users and there corresponding choosen difficulty
         // An object with two strings (two users), that make sure these two users doesn't interrupt with the other users watting for a opponent.
+        private static Dictionary<string , string> playerSelectedDifficulties = new();
         private static Dictionary<string, string> pinGames = new();
         private static Dictionary<string, string> playerMatches = new();
         private static Dictionary<string, bool> rematchRequests = new(); // A list over which two users that is eligible to play a rematch against each other, and if they have said yes
@@ -60,7 +61,7 @@ namespace Webprogrammering.Hubs
             }
         }
 
-        public async Task HostGame(string difficulty, string pin)
+        public async Task HostGame(string difficulty, string pin, string selectedDifficulty)
         {
             string connectionId = Context.ConnectionId;
 
@@ -72,24 +73,34 @@ namespace Webprogrammering.Hubs
 
             pinGames[pin] = connectionId;
             playerDifficulties[connectionId] = difficulty;
+            playerSelectedDifficulties[connectionId] = selectedDifficulty;
+
 
             await Clients.Client(connectionId).SendAsync("GameHosted", pin);
+
         }
 
         public async Task JoinGameByPin(string pin)
         {
             string connectionId = Context.ConnectionId;
 
-            if (!pinGames.ContainsKey(pin))
+            //Check if pin is correct
+            if (!pinGames.ContainsKey(pin)) 
             {
                 await Clients.Client(connectionId).SendAsync("Error", "Invalid PIN.");
                 return;
             }
 
             string hostConnectionId = pinGames[pin];
-            pinGames.Remove(pin); // PIN is no longer needed after the match is made
 
+            // PIN is no longer needed after the match is made
+            pinGames.Remove(pin); 
+
+            // Gives the joining player the values of difficulty selected by the host
             string difficulty = playerDifficulties[hostConnectionId];
+            string Klasse = playerSelectedDifficulties[hostConnectionId];
+
+
             playerMatches[hostConnectionId] = connectionId;
             playerMatches[connectionId] = hostConnectionId;
 
@@ -100,7 +111,9 @@ namespace Webprogrammering.Hubs
 
             var questionOrder = GenerateQuestionOrder(difficulty);
 
-            await Clients.Clients(hostConnectionId, connectionId).SendAsync("GameStart", gameGroup, questionOrder);
+            await Clients.Clients(hostConnectionId, connectionId).SendAsync("GameStart", gameGroup, questionOrder, Klasse);
+
+
         }
 
 

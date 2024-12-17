@@ -218,10 +218,11 @@
                 return;
             }
 
+
             connection.invoke("JoinGameByPin", pin)
                 .catch(err => console.error(err.toString()));
 
-            console.log(pin);
+            console.log("Invoking join Difficulty:", difficulty, "PIN:", pin)
         }
         </script>
 
@@ -245,10 +246,14 @@
                 document.getElementById('pin').innerHTML = pin;
 
 
-                connection.invoke("HostGame", difficulty, pin)
-                console.log("Invoking HostGame with Difficulty:", difficulty, "PIN:", pin);
+                connection.invoke("HostGame", difficulty, pin, selectedDifficulty);
+                console.log("Invoking HostGame with Difficulty:", difficulty, "PIN:", pin, "Klasse:", selectedDifficulty);
             });
         })
+
+        </script>
+
+        <script>
 
         </script>
 
