@@ -16,16 +16,22 @@
     <body>
 
         <!--Modal box for the user to choose a difficultcy and match with an opponent-->
-        <div class="modal" id="matchOpponent">
+    <div class="modal" id="matchOpponent">
             <div class="modal-content">
                 <!-- Gamemode Selector-->
-                <div class="startModel">
+            <div class="startModel">
                     <h1>Velkommen til Math-Attack spillet</h1>
                     <p>Vælg host eller join for at spille med en kammerat, eller tilfældig spiller</p>
 
+                <!--
                     <button type="button" id="host" onclick="hostButton()">Host Game</button>
                     <button type="button" id="join" onclick="joinButton()">Join Game</button>
                     <button type="button" id="random" onclick="randomButton()">Random Match</button>
+                -->
+                    <a class="btn" id="host" onclick="hostButton()" style="padding-left: 0px; padding-right: 0px;"><img style="width: 200px;" src="~/images/hostgamebtn.png" /></a>
+                <a class="btn" id="join" onclick="joinButton()" style="padding-left: 0px; padding-right: 0px;"><img style="width: 200px;" src="~/images/joingamebtn.png" /></a>
+                <a class="btn" id="random" onclick="randomButton()" style="padding-left: 0px; padding-right: 0px;"><img style="width: 230px;" src="~/images/randommatchbtn.png" /></a>
+                    
 
                 <span class="material-symbols-outlined informationButtom btn">info</span>
 
