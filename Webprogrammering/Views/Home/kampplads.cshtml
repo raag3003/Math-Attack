@@ -201,7 +201,7 @@
 
         </script>
 
-        <!-- Join button function -->
+        <!-- Joinscreen button function -->
         <script>
         function joinButton() {
 
@@ -216,17 +216,20 @@
         </script>
 
         <script>
+        // When join button is pressed the function gets executed
         function returnPin() {
+
+            // Saves the value of the insertet pin
             const pin = document.getElementById('pinNumber').value;
 
+            // Alert user if the pin isn't 6 digits
             if (!pin || pin.length !== 6) {
                 alert("Please enter a valid 6-digit PIN.");
                 return;
             }
-            selectedDifficulty
 
-            connection.invoke("JoinGameByPin", pin)
-                .catch(err => console.error(err.toString()));
+            // Connects to the host with the same pin
+            connection.invoke("JoinGameByPin", pin);
 
         }
         </script>
@@ -246,19 +249,16 @@
                 document.querySelector('.hostScreen').style.display = 'none';
                 document.querySelector('.hostWait').style.display = 'block';
 
+                //Gennerates a random pin from 100000 to 999999
                 let pinNumb = Math.floor(Math.random() * 899999 + 100000);
                 let pin = pinNumb.toString();
                 document.getElementById('pin').innerHTML = pin;
 
-
+                // Hosts the game saving the value of difficulty and the pin
                 connection.invoke("HostGame", difficulty, pin, selectedDifficulty);
                 console.log("Invoking HostGame with Difficulty:", difficulty, "PIN:", pin, "Klasse:", selectedDifficulty);
             });
         })
-
-        </script>
-
-        <script>
 
         </script>
 

@@ -71,6 +71,7 @@ namespace Webprogrammering.Hubs
                 return;
             }
 
+            // Stores the values of pin, difficulty, selectedDifficulty
             pinGames[pin] = connectionId;
             playerDifficulties[connectionId] = difficulty;
             playerSelectedDifficulties[connectionId] = selectedDifficulty;
