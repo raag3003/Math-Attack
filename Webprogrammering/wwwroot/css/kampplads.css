@@ -83,7 +83,7 @@
 .modal-content {
     background: #fff;
     padding: 20px;
-    min-height: 525px;
+    min-height: 950px;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -109,6 +109,8 @@
     bottom: 5px;
     height: auto;
     height: 50px;
+    color: darkorange;
+    background-color: saddlebrown;
 }
 .closeInformationButtom {
     margin: 0px;
@@ -125,6 +127,8 @@
 .information {
     display: none;
     text-align: center;
+    color: darkorange;
+    background-color: saddlebrown;
 }
 .start-button {
     margin: 5px;
