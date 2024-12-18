@@ -217,12 +217,11 @@
                 alert("Please enter a valid 6-digit PIN.");
                 return;
             }
-
+            selectedDifficulty
 
             connection.invoke("JoinGameByPin", pin)
                 .catch(err => console.error(err.toString()));
 
-            console.log("Invoking join Difficulty:", difficulty, "PIN:", pin)
         }
         </script>
 
