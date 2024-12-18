@@ -1,5 +1,8 @@
 ﻿body {
     margin: 0px;
+    background-image: url('../images/kampplads arena duel pic.jpeg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 .gameArena {
@@ -17,6 +20,8 @@
     height: 70px;
     top: 40%;
 }
+
+
 
 .player1 {
     background-color: red;
@@ -70,6 +75,9 @@
     background: rgba(0, 0, 0, 0.5);
     justify-content: center;
     align-items: center;
+    background-image: url('../images/villagefixed.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 /* Styleling the content inside the Modal */
 .modal-content {
@@ -79,6 +87,10 @@
     text-align: center;
     justify-content: center;
     align-items: center;
+    background-image: url('../images/lobbybackground.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
 }
 
 /*Stylling to the buttons inside the Modal box, which choose the dificulcy of the questions*/
