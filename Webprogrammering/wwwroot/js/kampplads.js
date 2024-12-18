@@ -319,11 +319,12 @@ connection.on("UserLeftBehind", () => {
 });
 
 // When there is established a connection, the div "matchOpponent" element will be none, and a countdown will start, before the acutally game begins
-connection.on("GameStart", (group, questionIds) => {
+connection.on("GameStart", (group, questionIds, klasse) => {
+    selectedDifficulty = klasse
     gameGroup = group;
     questionOrder = questionIds; // Save the questions order from the server
     document.getElementById('matchOpponent').style.display = 'none';
-    startCountdown();
+        startCountdown();
 });
 
 // The function for the 5 second countdown, which is also synchronized for both users with SignalR
