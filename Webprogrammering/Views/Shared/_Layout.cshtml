@@ -33,6 +33,34 @@
             </div>
         </nav>
     </header>
+
+    @if (!string.IsNullOrEmpty(ViewBag.BackgroundMusic))
+    {
+        <audio id="background-music" autoplay loop>
+            <source src="@ViewBag.BackgroundMusic" type="audio/mpeg">
+            Din browser understøtter ikke afspilning af lydfiler.
+        </audio>
+    }
+
+    <!-- Logic for fantasy background music -->
+    <!------------------------------------------------------------------------------------------------------------------------------------------>
+    <script>
+        const audioElement = document.getElementById('background-music');
+
+        // Checks if the there where music on the previous site and if it's the same for then contiue the music, else restart and play the song
+        if (localStorage.getItem('musicPlaying') === 'true') {
+            audioElement.play();
+        } else {
+            audioElement.currentTime = 0;
+            audioElement.play();
+        }
+        // Store the 'musicPlaying' variable in sessionStorage
+        window.addEventListener('beforeunload', function () {
+            sessionStorage.setItem('musicPlaying', !audioElement.paused);
+        });
+    </script>
+    <!--------------------------------------------------------------------------------------------------------------------------------->
+
     <div class="container-fluid">
         <main role="main" class="pb-0">
             @RenderBody()

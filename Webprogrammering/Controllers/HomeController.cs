@@ -18,34 +18,41 @@ namespace Webprogrammering.Controllers
 
         public IActionResult Index()
         {
+            ViewBag.BackgroundMusic = null;
             return View();
         }
 
         public IActionResult Privacy()
         {
+            ViewBag.BackgroundMusic = null;
             return View();
         }
         public IActionResult chatHub()
         {
+            ViewBag.BackgroundMusic = null;
             return View();
         }
         public IActionResult mathHub()
         {
+            ViewBag.BackgroundMusic = null;
             return View();
         }
         [Authorize]
         public IActionResult fantasyVillage()
         {
+            ViewBag.BackgroundMusic = Url.Content("~/audio/Medieval fantacy Music No Copyright.mp3");
             return View();
         }
         [Authorize]
         public IActionResult denSorteSkole()
         {
+            ViewBag.BackgroundMusic = Url.Content("~/audio/Medieval fantacy Music No Copyright.mp3");
             return View();
         }
         [Authorize]
         public IActionResult kampplads()
         {
+            ViewBag.BackgroundMusic = Url.Content("~/audio/Medieval fantacy Music No Copyright.mp3");
             return View();
         }
         
