@@ -2,6 +2,7 @@ html, body {
     margin: 0px;
     padding: 0px;
     border: none;
+    overflow: hidden;
 }
 
 .start-background {

@@ -71,6 +71,7 @@ namespace Webprogrammering.Hubs
                 return;
             }
 
+            // Stores the values of pin, difficulty, selectedDifficulty
             pinGames[pin] = connectionId;
             playerDifficulties[connectionId] = difficulty;
             playerSelectedDifficulties[connectionId] = selectedDifficulty;
@@ -98,7 +99,7 @@ namespace Webprogrammering.Hubs
 
             // Gives the joining player the values of difficulty selected by the host
             string difficulty = playerDifficulties[hostConnectionId];
-            string Klasse = playerSelectedDifficulties[hostConnectionId];
+            string klasse = playerSelectedDifficulties[hostConnectionId];
 
 
             playerMatches[hostConnectionId] = connectionId;
@@ -111,7 +112,7 @@ namespace Webprogrammering.Hubs
 
             var questionOrder = GenerateQuestionOrder(difficulty);
 
-            await Clients.Clients(hostConnectionId, connectionId).SendAsync("GameStart", gameGroup, questionOrder, Klasse);
+            await Clients.Clients(hostConnectionId, connectionId).SendAsync("GameStart", gameGroup, questionOrder, klasse);
 
 
         }
