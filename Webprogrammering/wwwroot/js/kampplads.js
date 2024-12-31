@@ -324,7 +324,11 @@ connection.on("GameStart", (group, questionIds, klasse) => {
     gameGroup = group;
     questionOrder = questionIds; // Save the questions order from the server
     document.getElementById('matchOpponent').style.display = 'none';
-        startCountdown();
+    startCountdown();
+
+    // Log for debugging
+    console.log("Game starting with difficulty:", selectedDifficulty);
+    console.log("Question order:", questionOrder);
 });
 
 // The function for the 5 second countdown, which is also synchronized for both users with SignalR

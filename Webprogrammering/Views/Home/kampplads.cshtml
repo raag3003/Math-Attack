@@ -20,7 +20,7 @@
             <div class="modal-content">
                 <!-- Gamemode Selector-->
             <div class="startModel">
-                    <h1 style="color: darkorange; background-color: saddlebrown; border-radius: 10px;">Velkommen til Math-Attack spillet</h1>
+                <h1 style="color: darkorange; background-color: saddlebrown; border-radius: 10px;">Velkommen til Math-Attack spillet</h1>
                 <p style="color: darkorange; background-color: saddlebrown; border-radius: 10px;">Vælg host eller join for at spille med en kammerat, eller tilfældig spiller</p>
 
                 <!--
@@ -53,21 +53,21 @@
                 </div>
 
                 <!-- Host wait Screen-->
-                <div class="hostWait" style="display: none;">
+                <div class="hostWait" style="display: none; color: darkorange; background-color: saddlebrown; border-radius: 6px; margin: 5px;">
                     <h1>Venter på spiller</h1>
                     <p>Pin:</p> 
                     <label id="pin"></label>
                 </div>
 
                 <!-- Join screen -->
-                <div class="joinScreen" style="display: none;">
+                <div class="joinScreen" style="display: none; color: darkorange; background-color: saddlebrown; border-radius: 6px; margin: 5px;">
                     <h1>Indtast pin kode</h1>
                     <input id="pinNumber" type="number" size="6"/>
                     <button type="button" onclick="returnPin()" >Join</button>
                 </div>
 
                 <!-- Difficulty Selection Screen -->
-                <div class="difficultyScreen" style="display: none;">
+            <div class="difficultyScreen" style="display: none; color: darkorange; background-color: saddlebrown; border-radius: 6px; margin: 5px;">
                     <h1>Velkommen til Math-Attack spillet</h1>
                     <p>Vælg en sværhedsgrad, også finder vi en modsatnder til dig!🎮</p>
 
@@ -97,8 +97,9 @@
                     <p style="margin-bottom: 0px">Der er to typer af matematikspørgsmål i spillet: multiple choice og et svar input-felt (kun et tal). Inden for disse to typer kan man støde på mange forskellige matematikemner lige fra multiplikation og addition til geometri og algebra.</p>
                     <p style="margin-top: 0px"><strong>Bemærk: </strong>Man kun skal skrive et enkelt tal i svar input-feltet - ingen bogstaver, ligninger eller mere end et tal.</p>
                 </div>
+
                 <!-- Searching for Opponent Screen -->
-                <div class="searchOpponent" style="display: none;">
+                <div class="searchOpponent" style="display: none; color: darkorange; background-color: saddlebrown; border-radius: 6px; margin: 5px;">
                     <h1>Leder efter en modstander</h1><br />
                     <p>Det kan godt tage et par minutter</p>
                     <div class="d-flex justify-content-center">
@@ -108,7 +109,7 @@
                     </div>
                 </div>
                 <!-- End screen after the game is finished -->
-                <div class="gameOverScreen" style="display: none;">
+                <div class="gameOverScreen" style="display: none; color: darkorange; background-color: saddlebrown; border-radius: 6px; margin: 5px;">
                     <h2 id="gameResult"></h2>
                     <div class="stats-container">
                         <h3>Statistik</h3>
@@ -132,13 +133,13 @@
         <!-------------------------------------------------------------------------------------------------------------------------------------------------->
         <div class="gameArena">
             <div class="user-health-bar" style="display: inline-block">
-                <p>Din Livskraft</p>
+                <p style="color: darkorange">Din Livskraft</p>
                 <div class="progress" style="width: 100px">
                     <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%</div>
                 </div>
             </div>
             <div class="opponent-health-bar" style="display: inline-block">
-                <p>Modstanderens Livskraft</p>
+                <p style="color: darkorange">Modstanderens Livskraft</p>
                 <div class="progress" style="width: 100px">
                     <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%</div>
                 </div>

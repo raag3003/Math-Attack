@@ -38,6 +38,7 @@ namespace Webprogrammering.Hubs
 
             waitingPlayers[difficulty].Add(connectionId);
             playerDifficulties[connectionId] = difficulty; // Store users choosen difficulty
+            playerSelectedDifficulties[connectionId] = difficulty; // Add this line to store selected difficulty
 
             if (waitingPlayers[difficulty].Count >= 2)
             {
@@ -50,14 +51,14 @@ namespace Webprogrammering.Hubs
                 playerMatches[player2] = player1;
 
                 string gameGroup = $"game_{player1}_{player2}";
-                await Groups.AddToGroupAsync(player1, $"game_{player1}_{player2}");
-                await Groups.AddToGroupAsync(player2, $"game_{player1}_{player2}");
+                await Groups.AddToGroupAsync(player1, gameGroup);
+                await Groups.AddToGroupAsync(player2, gameGroup);
 
                 // Generte a question order for both clients
                 var questionOrder = GenerateQuestionOrder(difficulty);
 
-                // Sending gameGroup & questionOrder to both clients (player 1 & player 2)
-                await Clients.Clients(player1, player2).SendAsync("GameStart", gameGroup, questionOrder);
+                // Send gameGroup, questionOrder, and difficulty to both clients
+                await Clients.Clients(player1, player2).SendAsync("GameStart", gameGroup, questionOrder, difficulty);
             }
         }
 
