@@ -1,5 +1,7 @@
+using MathAttack.Services;
 using Microsoft.AspNetCore.Http.Json;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json;
 using System.Text.Json.Serialization;
@@ -16,6 +18,12 @@ namespace Webprogrammering
         {
             // Create a new WebApplication builder instance
             var builder = WebApplication.CreateBuilder(args);
+
+            // Binds the MailerSend settings from appsettings.json
+            builder.Services.Configure<MailerSendSettings>(builder.Configuration.GetSection("MailerSend"));
+
+            // Registers your EmailSender as the implementation of IEmailSender
+            builder.Services.AddTransient<IEmailSender, EmailSender>();
 
             // Get the database connection string from configuration
             var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")
